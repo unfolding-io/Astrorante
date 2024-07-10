@@ -1,0 +1,450 @@
+
+  {
+    "name": "Settings",
+    "alternates": [],
+    "created_at": "2024-06-30T09:42:48.597Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T10:55:07.421Z",
+    "published_at": "2024-07-09T10:55:07.401Z",
+    "id": 517202723,
+    "uuid": "a7f6f4fa-fd1d-4d39-90d0-de20c6b05fad",
+    "is_folder": false,
+    "content": {
+      "_uid": "4f53e349-0c6a-4a52-b596-020ea06e6bae",
+      "logo": {
+        "id": 16337066,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1920x1280/fde48f6a9b/pexels-nuno-campos-756632-9351340.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "email": "hello@test.email",
+      "links": [
+        {
+          "_uid": "f0826d87-5beb-4325-bcb9-e4a9b6642d02",
+          "href": {
+            "id": "",
+            "url": "#",
+            "target": "_blank",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "#"
+          },
+          "icon": "facebook",
+          "label": "facebook",
+          "surface": "",
+          "component": "link"
+        },
+        {
+          "_uid": "adde1844-f3f4-4fcc-afa7-01f7fa481fc1",
+          "href": {
+            "id": "",
+            "url": "#",
+            "target": "_blank",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "#"
+          },
+          "icon": "instagram",
+          "label": "instagram",
+          "surface": "",
+          "component": "link"
+        }
+      ],
+      "phone": "0000000",
+      "slogan": "Fast website for Fine Dining",
+      "address": " Cala Sol d'en Serra s/n, 07849 Cala Llonga, Balearic Islands",
+      "dark_bg": {
+        "_uid": "098b7f5a-95b9-4742-802e-0855e9d16c49",
+        "color": "#404040",
+        "plugin": "native-color-picker"
+      },
+      "dark_fg": {
+        "_uid": "03ea49d3-c808-4f30-93c6-320a8ce69171",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "info_bg": {
+        "_uid": "43e6f5a1-2597-4e3a-a3ff-2460737428aa",
+        "color": "#38bdf8",
+        "plugin": "native-color-picker"
+      },
+      "info_fg": {
+        "_uid": "eddb099a-123a-46a3-ae21-19e14799bfce",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "light_bg": {
+        "_uid": "66a0085a-a9df-448d-8a1f-0eccc1490a0e",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "light_fg": {
+        "_uid": "712ce840-7488-4f3f-a8b8-472c3b5df45f",
+        "color": "#0f766e",
+        "plugin": "native-color-picker"
+      },
+      "whatsapp": "0000000",
+      "accent_bg": {
+        "_uid": "06941aed-b366-4eed-aeef-63ef19b6a2a4",
+        "color": "#0f766e",
+        "plugin": "native-color-picker"
+      },
+      "accent_fg": {
+        "_uid": "d0218527-dab6-4838-98fc-25b7d18284e1",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "component": "settings",
+      "danger_bg": {
+        "_uid": "df7f1d68-9638-46ad-a84f-fc5fe109253b",
+        "color": "#f87171",
+        "plugin": "native-color-picker"
+      },
+      "danger_fg": {
+        "_uid": "4a17e355-7fed-4d88-9f70-761841e483a8",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "font_body": "--font-system-ui",
+      "main_menu": [
+        {
+          "_uid": "a079a74b-2c15-484b-8d17-ad36197474b6",
+          "href": {
+            "id": "",
+            "url": "/",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "/"
+          },
+          "icon": "home",
+          "label": "Home",
+          "surface": "",
+          "component": "link"
+        },
+        {
+          "_uid": "31f92117-1171-4aff-a3a6-901f502cd8db",
+          "href": {
+            "id": "",
+            "url": "/news",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "/news"
+          },
+          "icon": "news",
+          "label": "Docs & Features",
+          "surface": "",
+          "component": "link"
+        }
+      ],
+      "blog_title": "News",
+      "primary_bg": {
+        "_uid": "90314e8b-98ec-4277-8fb2-54fa219172f3",
+        "color": "#14b8a6",
+        "plugin": "native-color-picker"
+      },
+      "primary_fg": {
+        "_uid": "af237909-4b97-4865-83e6-9c7c5596ccb3",
+        "color": "#ffffff",
+        "plugin": "native-color-picker"
+      },
+      "success_bg": {
+        "_uid": "4dd13de1-6663-454e-ac63-edcf704530f7",
+        "color": "#84cc16",
+        "plugin": "native-color-picker"
+      },
+      "success_fg": {
+        "_uid": "60a84b53-335c-4e05-ba0f-f73ae22d300f",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "warning_bg": {
+        "_uid": "8e2c1b89-4f3e-46b0-934f-ff1f2f46cbf4",
+        "color": "#d97706",
+        "plugin": "native-color-picker"
+      },
+      "warning_fg": {
+        "_uid": "54f904ab-3c42-485c-b1f2-3d5951640fd8",
+        "color": "#f7fee7",
+        "plugin": "native-color-picker"
+      },
+      "footer_text": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "AstroRante ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": "is a state-of-the-art website theme crafted for fine dining establishments. ",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "phone_label": "+34 000 000 00",
+      "blog_content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Here some info on how to get you started.",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "company_name": "Astrorante",
+      "secondary_bg": {
+        "_uid": "12aef145-3331-4d14-8da5-48c258357623",
+        "color": "#d9f99d",
+        "plugin": "native-color-picker"
+      },
+      "secondary_fg": {
+        "_uid": "f89efe61-d569-46f1-a9fa-3a377dd4ae38",
+        "color": "#0f766e",
+        "plugin": "native-color-picker"
+      },
+      "surface_menu": "surface-secondary",
+      "surface_page": "surface-primary",
+      "blog_og_image": {
+        "id": 16347557,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1280x720/321a6ca984/astroranthero.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "blog_og_title": "AstroRante News",
+      "font_headings": "--font-system-ui",
+      "footer_menu_1": [
+        {
+          "_uid": "bee93b15-1691-4179-96d1-df8dc5d82b96",
+          "href": {
+            "id": "",
+            "url": "/",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "/"
+          },
+          "icon": "",
+          "label": "Home",
+          "surface": "",
+          "component": "link"
+        },
+        {
+          "_uid": "a2bec4d1-c675-4120-9adb-6dfe4b63701a",
+          "href": {
+            "id": "",
+            "url": "/news",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "/news"
+          },
+          "icon": "",
+          "label": "Docs & Feaures",
+          "surface": "",
+          "component": "link"
+        },
+        
+        {
+          "_uid": "945b838e-0134-471f-bcf2-40bf9f110890",
+          "href": {
+            "id": "",
+            "url": "#",
+            "linktype": "url",
+            "fieldtype": "multilink",
+            "cached_url": "https://github.com/unfolding-io/Astrorante"
+          },
+          "icon": "",
+          "label": "GitHub",
+          "surface": "",
+          "component": "link"
+        }
+      ],
+      "footer_menu_2": [
+        {
+          "_uid": "f9c7aead-01a0-4a9b-bda7-08f09c03eeee",
+          "href": {
+            "id": "a5f4d4ff-b4e7-4198-b445-226d3fdcd288",
+            "url": "",
+            "linktype": "story",
+            "fieldtype": "multilink",
+            "cached_url": "menu"
+          },
+          "icon": "",
+          "label": "Menu",
+          "surface": "",
+          "component": "link"
+        }
+      ],
+      "opening_hours": [
+        {
+          "day": "2",
+          "_uid": "fc5d30bc-afa7-4aac-89f7-3f0ce5197963",
+          "time": {
+            "_uid": "4f4f7ac7-85e8-4b45-9308-cb75e031c020",
+            "time": {
+              "end": "00:00",
+              "start": "08:00"
+            },
+            "plugin": "chosio-time"
+          },
+          "component": "opening_hour"
+        },
+        {
+          "day": "3",
+          "_uid": "00f8f337-aec6-4c0f-8284-ebce925a2545",
+          "time": {
+            "_uid": "1e79fd8b-d886-4b47-b33b-a9e33d4d3a92",
+            "time": {
+              "end": "00:00",
+              "start": "08:00"
+            },
+            "plugin": "chosio-time"
+          },
+          "component": "opening_hour"
+        },
+        {
+          "day": "4",
+          "_uid": "eb093b11-c053-44ce-b5f7-0075de35c733",
+          "time": {
+            "_uid": "5a1cca89-5c1e-48eb-9364-df35119e1a88",
+            "time": {
+              "end": "00:00",
+              "start": "08:00"
+            },
+            "plugin": "chosio-time"
+          },
+          "component": "opening_hour"
+        },
+        {
+          "day": "6",
+          "_uid": "6507fe5b-a208-414c-8af5-a2ad5b04e479",
+          "time": {
+            "_uid": "db68fdf0-4e6a-422b-ab54-a14acf4f9a20",
+            "time": {
+              "end": "00:00",
+              "start": "08:00"
+            },
+            "plugin": "chosio-time"
+          },
+          "component": "opening_hour"
+        },
+        {
+          "day": "0",
+          "_uid": "025c43bf-2aae-4fc2-bf11-39e13a6632fc",
+          "time": {
+            "_uid": "a08de629-ee4e-4cee-9643-98f6040bf7e0",
+            "time": {
+              "end": "00:00",
+              "start": "08:00"
+            },
+            "plugin": "chosio-time"
+          },
+          "component": "opening_hour"
+        }
+      ],
+      "footer_3_label": "Opening Hours",
+      "surface_footer": "surface-accent",
+      "font_weight_body": "400",
+      "blog_og_description": "Here some info on how to get you started.",
+      "footer_menu_1_label": "Informaion",
+      "footer_menu_2_label": "Food",
+      "font_weight_headings": "900",
+      "footer_3_label__i18n__nl": "Openings Tijden",
+      "footer_menu_1_label__i18n__nl": "Informatie",
+      "footer_menu_2_label__i18n__nl": "Eten"
+    },
+    "published": true,
+    "slug": "settings",
+    "path": null,
+    "full_slug": "site-settings/settings",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 517202719,
+      "uuid": "c08ce938-778d-44d7-a192-f1be3e9e90a3",
+      "name": "Site Settings",
+      "slug": "site-settings",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "a855dbb95fca005b542bd212fc599e4f8c85478c",
+      "timestamp": "1720535793"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 517202719,
+        "name": "Site Settings",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "site-settings",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:11:53.038Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "site-settings/settings",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 0,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  }

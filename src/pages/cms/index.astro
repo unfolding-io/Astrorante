@@ -1,0 +1,55 @@
+---
+import { api, getPage, getSettings } from "@util/storyblokApi";
+import { SITE_LANG } from "astro:env/server";
+import { useTranslations, getLangFromUrl, translateUrl } from "@util/translate";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import Layout from "@layouts/Layout.astro";
+
+export const prerender = false;
+const slug = Astro.url.searchParams.get("url");
+
+if (!slug) {
+  return Astro.redirect("/404");
+}
+
+const { data } = (await api.get("cdn/spaces/me", {})) as SpaceObj;
+const locales = [SITE_LANG, ...data.space.language_codes];
+const sbUrl = new URL(slug, Astro.url.origin);
+const lang = getLangFromUrl(sbUrl);
+const dataLang: string = !lang ? "default" : lang;
+const pageLang = dataLang === "default" ? SITE_LANG : dataLang;
+const localeUrls = translateUrl(sbUrl, locales || [SITE_LANG]);
+const dataUrl = localeUrls.filter((url) => url.url !== SITE_LANG)[0].url;
+
+const t = useTranslations(pageLang);
+const settings = await getSettings(lang);
+
+let blok: PageStoryblok | null = null;
+
+try {
+  blok = await getPage(dataUrl, lang);
+} catch (e) {
+  console.log("error", e);
+}
+
+const meta = {
+  title: "CMS",
+  description: "edit your page",
+  og_image: "",
+  image: "",
+};
+---
+
+<Layout {meta} {settings} bridge={true}>
+  {blok && <StoryblokComponent blok={blok} status="draft" />}
+  {
+    !blok && (
+      <div class="surface-accent grid h-full min-h-svh w-full place-items-center">
+        <div class="text-center">
+          <h1 class="text-4xl">{t("page_not_found")}</h1>
+          <div>({t("or_not_saved")})</div>
+        </div>
+      </div>
+    )
+  }
+</Layout>

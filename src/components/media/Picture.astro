@@ -1,0 +1,157 @@
+---
+interface Props {
+  alt: string;
+  src: string;
+  sizes?: string;
+  breakpoints?: number[];
+  ar?: number | string;
+  className?: string;
+  loading?: "lazy" | "eager";
+  attributes?: {
+    picture?: Record<string, string>;
+    img?: Record<string, string>;
+  };
+  layout?: "fill" | "fullWidth" | "fit" | undefined;
+  artDirectives?: {
+    media: string;
+    breakpoints: number[];
+    ar: number;
+  }[];
+}
+
+let {
+  src,
+  sizes,
+  breakpoints,
+  alt,
+  ar,
+  className,
+  loading,
+  attributes,
+  layout,
+  artDirectives,
+} = Astro.props;
+
+
+const widths = breakpoints || [
+  320, 375, 414, 512, 640, 682, 768, 840, 853, 950, 1024, 1056, 1067, 1280,
+  1280, 1440, 1536, 1600, 1707, 1920, 2560,
+];
+const pictureAtrtibutes = attributes?.picture || {};
+const imgAtrtibutes = attributes?.img || {};
+const originalImageSize = src.split("/")[5].split("x");
+const originalAspect: number =
+  parseInt(originalImageSize[0], 10) / parseInt(originalImageSize[1], 10);
+
+ar = parseFloat(ar+"") || originalAspect;
+
+const getLayoutClass = () => {
+  if (layout === "fill") return "w-full h-full object-cover";
+  return "w-full h-auto";
+};
+
+const getHeight = (width: number, aspect: number) => {
+  if (!!aspect) return Math.round(width / aspect);
+  return Math.round(width / originalAspect);
+};
+
+const w = parseInt(originalImageSize[0], 10);
+const h = getHeight(w, ar);
+
+const createSourceAttributes = (
+  format: string,
+  breakpoints: number[],
+  aspect: number,
+) => {
+  let srscet = breakpoints
+    .map(
+      (width) =>
+        `${src}/m/${width}x${getHeight(
+          width,
+          aspect,
+        )}/smart/filters:format(${format}) ${width}w`,
+    )
+    .join(", ");
+
+  return {
+    srcset: srscet,
+    width: w,
+    height: getHeight(w, aspect),
+  };
+};
+
+const getBgImage = async () => {
+ 
+  if (!src.includes(".jpg")) {
+    return '';
+  }
+
+  const url = `${src}/m/${15}x${getHeight(15, ar)}/smart/filters:format(jpg)`;
+  const response = await fetch(url);
+  const bg = Buffer.from(await response.arrayBuffer()).toString("base64");
+  return ` url(data:image/png;base64,${bg})`;
+};
+let bgImage = await getBgImage();
+---
+
+<picture {...pictureAtrtibutes} class={getLayoutClass()}>
+  {
+    artDirectives &&
+      artDirectives.length > 0 &&
+      artDirectives.map((breakpoint) => (
+        <>
+          <source
+            media={breakpoint.media}
+            {...createSourceAttributes(
+              "avif",
+              breakpoint.breakpoints,
+              breakpoint.ar,
+            )}
+            sizes={sizes || "100vw"}
+            type="image/avif"
+          />
+          <source
+            media={breakpoint.media}
+            {...createSourceAttributes(
+              "webp",
+              breakpoint.breakpoints,
+              breakpoint.ar,
+            )}
+            sizes={sizes || "100vw"}
+            type="image/webp"
+          />
+        </>
+      ))
+  }
+  <source
+    {...createSourceAttributes("avif", widths, ar)}
+    type="image/avif"
+    sizes={sizes || "100vw"}
+  />
+  <source
+    {...createSourceAttributes("webp", widths, ar)}
+    type="image/webp"
+    sizes={sizes || "100vw"}
+  />
+
+  <img
+    style={`background-image:  ${bgImage}`}
+    {...imgAtrtibutes}
+    src={`${src}/m/100x${getHeight(100, ar)}/smart`}
+    width={w}
+    sizes={sizes || "100vw"}
+    class={`${className || ""} ${getLayoutClass()}`}
+    height={h !== 0 ? h : w}
+    decoding="async"
+    alt={alt || "image"}
+    loading={loading || "lazy"}
+  />
+</picture>
+<style>
+  img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(80px);
+  }
+</style>

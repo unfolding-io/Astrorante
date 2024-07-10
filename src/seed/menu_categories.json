@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Tapas",
+    "parent_id": 517202718,
+    "group_id": "039f869d-e160-4866-a05d-bfbf5abd1f03",
+    "alternates": [],
+    "created_at": "2024-07-01T07:59:26.405Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T10:17:57.037Z",
+    "published_at": "2024-07-09T10:17:57.018Z",
+    "id": 517355255,
+    "uuid": "1ec252a7-8f72-445d-be03-9fb569c55f60",
+    "is_folder": false,
+    "content": {
+      "_uid": "6efc89ae-ee66-4827-9dfe-43643d587215",
+      "icon": "burger",
+      "time": {
+        "_uid": "b3fb8fc6-81e7-4474-aa59-fd3d231c3d1b",
+        "time": {
+          "end": "00:00",
+          "start": "08:00",
+          "disabled": false
+        },
+        "plugin": "chosio-time"
+      },
+      "title": "Tapas",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Savor the essence of Spain with our delectable tapas. ",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "From ",
+                "type": "text"
+              },
+              {
+                "text": "spicy patatas",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": " bravas to savory jamón ibérico, each dish is crafted to delight your palate. Perfect for ",
+                "type": "text"
+              },
+              {
+                "text": "sharing",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": " and pairing with our exquisite drinks, our tapas promise a culinary adventure.",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "component": "menu_category",
+      "thumbnail": {
+        "id": null,
+        "alt": null,
+        "name": "",
+        "focus": null,
+        "title": null,
+        "source": null,
+        "filename": "",
+        "copyright": null,
+        "fieldtype": "asset",
+        "meta_data": {}
+      },
+      "content__i18n__nl": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Geniet van de essentie van Spanje met onze",
+                "type": "text"
+              },
+              {
+                "text": " verrukkelijke tapas",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": ". ",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Van pittige patatas bravas tot hartige jamón ibérico, elk gerecht is bereid om uw smaakpapillen te verwennen. Perfect om te delen en te combineren met onze voortreffelijke drankjes, onze tapas beloven een culinaire avontuur.",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "published": true,
+    "slug": "tapas",
+    "path": null,
+    "full_slug": "menu-categories/tapas",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 517202718,
+      "uuid": "83d5e1bd-f2e3-4e74-9394-40a4183798c8",
+      "name": "Menu Categories",
+      "slug": "menu-categories",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 517202718,
+        "name": "Menu Categories",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-categories",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-07-01T08:00:33.978Z",
+
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-categories/tapas",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": -10,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+  {
+    "name": "Cocktails🍹",
+    "parent_id": 517202718,
+    "group_id": "ddbb6335-b9f2-4a48-af57-4e753ac37075",
+    "alternates": [],
+    "created_at": "2024-06-30T09:42:50.238Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T10:19:09.211Z",
+    "published_at": "2024-07-09T10:19:09.185Z",
+    "id": 517202727,
+    "uuid": "af369521-3b85-4899-b9a8-359b0d6a7aa7",
+    "is_folder": false,
+    "content": {
+      "_uid": "2c095c52-3111-41d1-bb90-e66838e1a89a",
+      "icon": "cocktail",
+      "time": {
+        "_uid": "a221b7f5-5bab-4954-83d2-ed7dd109c319",
+        "time": {
+          "end": "00:00",
+          "start": "08:00",
+          "disabled": false
+        },
+        "plugin": "chosio-time"
+      },
+      "title": "Cocktails 🍹",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Indulge in our ",
+                "type": "text"
+              },
+              {
+                "text": "handcrafted cocktails,",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": " where classic flavors meet innovative twists. ",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "From refreshing mojitos to bold martinis, each drink is a celebration in a glass. Perfect for any occasion, our cocktails promise an unforgettable experience.",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "component": "menu_category",
+      "thumbnail": {
+        "id": 16356549,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/2048x2048/92a8587ea5/margarita.jpeg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {},
+        "is_private": false,
+        "is_external_url": false
+      },
+      "menu_items": [],
+      "content__i18n__nl": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Ontdek onze",
+                "type": "text"
+              },
+              {
+                "text": " ambachtelijke cocktails",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": ", waar klassieke smaken samenkomen met innovatieve twists. ",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Van verfrissende mojito's tot gedurfde martini's, elk drankje is een feest in een glas. Perfect voor elke gelegenheid, onze cocktails beloven een onvergetelijke ervaring.",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "published": true,
+    "slug": "cocktails",
+    "path": null,
+    "full_slug": "menu-categories/cocktails",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 517202718,
+      "uuid": "83d5e1bd-f2e3-4e74-9394-40a4183798c8",
+      "name": "Menu Categories",
+      "slug": "menu-categories",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 517202718,
+        "name": "Menu Categories",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-categories",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:11:42.457Z",
+
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-categories/cocktails",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 0,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  }
+]

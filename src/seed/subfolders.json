@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Cocktails",
+    "is_folder": true,
+    "content": {
+      "content_types": ["menu_item"],
+      "lock_subfolders_content_types": true
+    },
+    "published": true,
+    "slug": "cocktails",
+    "full_slug": "menu-items/cocktails",
+    "default_root": "menu_item",
+    "disble_fe_editor": true,
+    "parent": {
+      "name": "Menu Items",
+      "slug": "menu-items",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+
+    "position": -10
+  },
+  {
+    "name": "Drinks",
+    "is_folder": true,
+    "content": {
+      "content_types": ["menu_item"],
+      "lock_subfolders_content_types": true
+    },
+    "published": true,
+    "slug": "drinks",
+    "full_slug": "menu-items/drinks",
+    "default_root": "menu_item",
+    "disble_fe_editor": true,
+    "parent": {
+      "name": "Menu Items",
+      "slug": "menu-items",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false
+  },
+  {
+    "name": "Bites",
+    "is_folder": true,
+    "content": {
+      "content_types": ["menu_item"],
+      "lock_subfolders_content_types": true
+    },
+    "published": true,
+    "slug": "bites",
+    "full_slug": "menu-items/bites",
+    "default_root": "menu_item",
+    "disble_fe_editor": true,
+    "parent": {
+      "name": "Menu Items",
+      "slug": "menu-items",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false
+  }
+]

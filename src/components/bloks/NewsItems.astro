@@ -1,0 +1,56 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import { api } from "@util/storyblokApi";
+import type { ISbStories } from "@storyblok/astro";
+import PostClasicCard from "@components/cards/PostClasicCard.astro";
+
+interface Props {
+  blok: MenuItemsStoryblok;
+  lang: string;
+  status: StoryStatus;
+}
+
+const { blok, lang, status } = Astro.props;
+const { content, title, surface, items, accent_surface } = blok;
+let stories;
+
+/* get menu_items */
+if (items && items.length > 0) {
+  const newsItems = (await api.get(`cdn/stories`, {
+    content_type: "post",
+    version: status || "published",
+    by_uuids_ordered: items.join(","),
+    language: lang,
+    per_page: 100,
+  })) as ISbStories;
+
+  /*  stories = newsItems.data.stories.map(
+    (item) => item.content
+  ) as PostStoryblok[]; */
+  stories = newsItems.data.stories;
+}
+---
+
+<section class={`py-14 md:py-20 ${surface || ""}`} {...storyblokEditable(blok)}>
+  <div class="content-grid gap-y-8">
+    <div class="breakout">
+      <h2 class="text-4xl">
+        {title}
+      </h2>
+      <div class="richtext" set:html={renderRichText(content)} />
+    </div>
+    {
+      stories && stories.length > 0 && (
+        <div class={`breakout flex flex-wrap gap-4 md:gap-8`}>
+          {stories.map((story) => (
+            <PostClasicCard
+              {...story.content}
+              full_slug={story.full_slug}
+              accent={accent_surface}
+            />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

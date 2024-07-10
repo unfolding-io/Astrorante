@@ -1,0 +1,66 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import Picture from "@components/media/Picture.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+interface Props {
+  blok: PostStoryblok;
+  status?: "draft" | "published" | undefined;
+}
+const { blok, status } = Astro.props;
+const { title, content, thumbnail, surface, body } = blok;
+---
+
+<main {...storyblokEditable(blok)} class={`${surface || "surface-light"}`}>
+  <section class="grid min-h-svh w-full grid-cols-1 md:grid-cols-5">
+    <div
+      class="relative before:absolute before:inset-y-0 before:left-0 before:w-1/2 before:bg-black/10 before:content-[''] md:col-span-2"
+    >
+      <div class="sticky top-0 pb-10 pl-10 pt-24 md:h-svh">
+        <div
+          class="relative h-full overflow-hidden rounded-lg bg-dark shadow-lg md:max-h-[42rem]"
+        >
+          {
+            thumbnail && (
+              <Picture
+                src={thumbnail.filename}
+                alt={title}
+                sizes={`(min-width: 726px) 50vw , 100vw `}
+                ar={1}
+                layout="fill"
+                breakpoints={[200, 320, 420, 520, 640, 725, 960]}
+                artDirectives={[
+                  {
+                    media: "(max-width: 768px)",
+                    ar: 5 / 4,
+                    breakpoints: [320, 440, 640, 768],
+                  },
+                ]}
+              />
+            )
+          }
+
+          <div
+            class="absolute inset-x-4 bottom-4 z-20 flex items-end justify-between"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative z-40 mx-auto grid max-w-2xl content-center items-center justify-self-start p-4 sm:p-8 md:col-span-3"
+    >
+      <div class="grid h-fit grid-cols-1 py-8 md:py-20">
+        <h1 class="text-balance pb-10 text-5xl md:text-6xl">
+          {title}
+        </h1>
+
+        <div
+          class="richtext max-w-2xl text-pretty"
+          set:html={renderRichText(content)}
+        />
+      </div>
+    </div>
+  </section>
+  {body?.map((blok) => <StoryblokComponent blok={blok} {status} />)}
+</main>

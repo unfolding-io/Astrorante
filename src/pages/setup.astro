@@ -1,0 +1,99 @@
+---
+import Layout from "@layouts/LayoutMinimal.astro";
+import SetupVue from "@components/setup/SetupVue.vue";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout
+  meta={{
+    title: "Setup Astrorante",
+    description: "Getting stared",
+    og_image: "",
+    image: "",
+  }}
+>
+  <div class="content-grid min-h-svh gap-y-3 py-14">
+    <div>
+      <h1 class="pb-3 text-5xl">Astrorante Sync</h1>
+      <div class="richtext text-balance">
+        <p>
+          To get your site up and running you need to add <b>Data Sources</b>,
+          <b>Components</b> and <b>Stories</b> to your Storyblok space.
+        </p>
+        <p>
+          To get you stared delete your current Storyblok Data Sources,
+          Components and Stories and sync it with Asrorante.
+        </p>
+      </div>
+      <div
+        class="badge surface-danger absolute right-4 top-4 block aspect-square w-[230px] rotate-6 rounded-full text-center text-xl font-bold shadow-md"
+      >
+        <p>
+          WARNING!<br /> This will delete all your current Data Sources, Components
+          and Stories.
+        </p>
+      </div>
+      <div class="flex max-w-[600px] items-center gap-4 pt-8">
+        <Icon name="logo_full" class="h-auto w-full flex-1" is:inline />
+        <Icon name="arrow-right" class="h-auto w-14" is:inline />
+        <Icon name="storyblok-logo" class="h-auto w-full flex-1" is:inline />
+      </div>
+      <div class="mt-8">
+        <SetupVue client:idle />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .badge {
+      p {
+        height: 100%;
+        font-size: 21px;
+        line-height: 1.25;
+        padding: 0;
+        text-align: center;
+      }
+    }
+    .badge::before {
+      content: "";
+      width: 50%;
+      height: 100%;
+      float: left;
+      shape-outside: polygon(
+        0 0,
+        98% 0,
+        50% 6%,
+        23.4% 17.3%,
+        6% 32.6%,
+        0 50%,
+        6% 65.6%,
+        23.4% 82.7%,
+        50% 94%,
+        98% 100%,
+        0 100%
+      );
+      shape-margin: 7%;
+    }
+
+    .badge p::before {
+      content: "";
+      width: 50%;
+      height: 100%;
+      float: right;
+      shape-outside: polygon(
+        2% 0%,
+        100% 0%,
+        100% 100%,
+        2% 100%,
+        50% 94%,
+        76.6% 82.7%,
+        94% 65.6%,
+        100% 50%,
+        94% 32.6%,
+        76.6% 17.3%,
+        50% 6%
+      );
+      shape-margin: 7%;
+    }
+  </style>
+</Layout>

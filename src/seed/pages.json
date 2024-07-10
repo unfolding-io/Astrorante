@@ -1,0 +1,1126 @@
+[
+  {
+    "name": "Home",
+    "parent_id": 0,
+    "group_id": "b3b62c96-20cc-4c2a-be16-212028035426",
+    "alternates": [],
+    "created_at": "2024-06-30T09:42:49.237Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T14:07:10.864Z",
+    "published_at": "2024-07-09T14:07:10.830Z",
+    "id": 517202724,
+    "uuid": "2835ca0d-3dbd-417d-a5d6-5e1e813f807f",
+    "is_folder": false,
+    "content": {
+      "_uid": "3cd37577-d66c-4cda-b558-ca4efe6a2809",
+      "body": [
+        {
+          "_uid": "00d3f5ed-6f58-4834-86fd-7d387d2935fb",
+          "links": [
+            {
+              "_uid": "635c39db-784c-444c-b790-c983e098dcdb",
+              "href": {
+                "id": "647ecc80-c5d4-410b-8a9b-ca8267556f85",
+                "url": "",
+                "linktype": "story",
+                "fieldtype": "multilink",
+                "cached_url": "about-astrorante"
+              },
+              "icon": "",
+              "label": "About",
+              "surface": "surface-primary",
+              "component": "link"
+            },
+            {
+              "_uid": "3df37a82-abcb-4080-a58e-6c56edccb013",
+              "href": {
+                "id": "a5f4d4ff-b4e7-4198-b445-226d3fdcd288",
+                "url": "",
+                "linktype": "story",
+                "fieldtype": "multilink",
+                "cached_url": "menu"
+              },
+              "icon": "",
+              "label": "Menu",
+              "surface": "surface-dark",
+              "component": "link"
+            }
+          ],
+          "title": "Meet \u003Cstrong\u003EAstrorante:\u003C/strong\u003E  a Tasty Theme for Your Restaurant.",
+          "video": {
+            "id": 16347572,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/x/17af84c0a1/heroastrorant.mp4",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "AstroRante ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Astro",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ", ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Storyblok CMS",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ", ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Vue",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ", and ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "Tailwind",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ", AstroRante delivers an unparalleled online presence for your restaurant.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          "surface": "surface-primary",
+          "component": "hero",
+          "thumbnail": {
+            "id": 16347557,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/1280x720/321a6ca984/astroranthero.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "bg_opacity": "opacity-50",
+          "accent_color": "--secondary-bg",
+          "title__i18n__nl": "Ontdek \u003Cstrong\u003EAstroRante: \u003C/strong\u003EHet perfecte thema voor culinaire websites",
+          "content__i18n__nl": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "AstroRante is een ultramoderne website-thema, speciaal ontworpen voor verfijnde eetgelegenheden. Door de kracht van Astro, Storyblok CMS, Vue en Tailwind te combineren, biedt AstroRante een ongeëvenaarde online aanwezigheid voor uw restaurant.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "_uid": "41182a29-8c9d-4faa-aef2-2f2d336181b0",
+          "align": "",
+          "image": {
+            "id": 16347508,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/2048x2048/a1efca4f74/burger-2.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "links": [
+            {
+              "_uid": "53b577cc-9772-45ab-a530-bc043a1fa5aa",
+              "href": {
+                "id": "a5f4d4ff-b4e7-4198-b445-226d3fdcd288",
+                "url": "",
+                "linktype": "story",
+                "fieldtype": "multilink",
+                "cached_url": "menu"
+              },
+              "icon": "",
+              "label": "menu",
+              "surface": "surface-primary",
+              "component": "link"
+            }
+          ],
+          "video": {
+            "id": null,
+            "alt": null,
+            "name": "",
+            "focus": null,
+            "title": null,
+            "source": null,
+            "filename": "",
+            "copyright": null,
+            "fieldtype": "asset",
+            "meta_data": {
+
+            }
+          },
+          "layout": "fill",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Flexible Menu",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Showcase your exquisite cuisine with ease. AstroRante's flexible menu feature allows you to:",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "bullet_list",
+                "content": [
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Effortlessly update menu items.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Highlight daily specials and seasonal dishes.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Engage customers with stunning visuals and detailed descriptions. ",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "reverse": true,
+          "surface": "surface-dark",
+          "component": "text_media",
+          "container": "",
+          "media_width": "50",
+          "aspect_ratio": "0.8",
+          "content__i18n__nl": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Flexibel Menu",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Toon uw voortreffelijke keuken met gemak. Met de flexibele menufunctie van AstroRante kunt u:",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "bullet_list",
+                "content": [
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Moeiteloos menu-items bijwerken.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Dagelijkse specials en seizoensgerechten benadrukken.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Klanten betrekken met verbluffende beelden en gedetailleerde beschrijvingen.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "fit": "",
+          "_uid": "4eccdcc9-f87e-44a2-9848-2e2fea3c8aa6",
+          "align": "",
+          "image": {
+            "id": 16513715,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/720x720/4e4db03c82/editor-hero-square-1-frame-at-0m0s.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "links": [
+            {
+              "_uid": "4002ec7a-a32d-4d02-b6a3-dcdf6a1c6ccd",
+              "href": {
+                "id": "",
+                "url": "https://www.storyblok.com/",
+                "target": "_blank",
+                "linktype": "url",
+                "fieldtype": "multilink",
+                "cached_url": "https://www.storyblok.com/"
+              },
+              "icon": "external",
+              "label": "storyblok.com",
+              "surface": "surface-light",
+              "component": "link"
+            }
+          ],
+          "video": {
+            "id": 16513706,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/x/fc256d3c07/editor-hero-square-1.mp4",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "banner": false,
+          "layout": "fill",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Effortless Visual Editing ",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Experience the simplicity of creating and managing your website content with our intuitive visual editor. ",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Whether you're a seasoned developer or a content creator with no coding experience, Storyblok is designed to make your life easier.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          "reverse": false,
+          "surface": "surface-accent",
+          "component": "text_media",
+          "container": "",
+          "media_width": "50",
+          "aspect_ratio": "",
+          "image_lightbox": true,
+          "content__i18n__nl": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Moeiteloze Visuele Bewerking",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Ervaar het gemak van het creëren en beheren van uw website-inhoud met onze intuïtieve visuele editor.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Of u nu een ervaren ontwikkelaar bent of een content creator zonder programmeerervaring, Storyblok is ontworpen om uw leven gemakkelijker te maken.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "fit": "",
+          "_uid": "0199363c-9de3-40ba-a644-9f0d1dab4857",
+          "align": "",
+          "image": {
+            "id": 16347557,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/1280x720/321a6ca984/astroranthero.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "links": [],
+          "video": {
+            "id": null,
+            "alt": null,
+            "name": "",
+            "focus": null,
+            "title": null,
+            "filename": null,
+            "copyright": null,
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_external_url": false
+          },
+          "banner": false,
+          "layout": "fill",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Lightning Fast ",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "AstroRante is built for speed, ensuring your website performs at its best. With an up to 100% Google Page Speed score, your customers will enjoy:",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "bullet_list",
+                "content": [
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Instant loading times that enhance user experience.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Seamless navigation across your site.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Higher search engine rankings due to superior performance.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "reverse": true,
+          "surface": "surface-accent",
+          "component": "text_media",
+          "container": "",
+          "media_width": "50",
+          "aspect_ratio": "",
+          "image_lightbox": true,
+          "content__i18n__nl": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Bliksemsnel",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "AstroRante is gebouwd voor snelheid, zodat uw website optimaal presteert. Met een Google Page Speed-score tot 100% zullen uw klanten genieten van:",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "bullet_list",
+                "content": [
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Directe laadtijden die de gebruikerservaring verbeteren.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Naadloze navigatie op uw site.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list_item",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "text": "Hogere zoekmachine rankings dankzij superieure prestaties.",
+                            "type": "text"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "_uid": "d4bf66ae-403f-469b-b383-86d68cbbcbb9",
+          "items": [
+            "72995780-9edf-4792-9419-dd87deb54dcb",
+            "6a26b051-ab56-44e4-ae25-8fa58466793f"
+          ],
+          "title": "Docs & Features",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          },
+          "surface": "surface-dark",
+          "component": "news_items",
+          "accent_surface": "surface-light"
+        },
+        {
+          "_uid": "01fa686b-2e6f-421f-9ab3-e79bf2122f1f",
+          "align": "text-center mx-auto justify-items-center",
+          "image": {
+            "id": 16347507,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/1400x919/1907ba4dd1/burger.jpg",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "links": [
+            {
+              "_uid": "4a6d98b9-f382-4dce-9cca-34444a659ae0",
+              "href": {
+                "id": "",
+                "url": "#",
+                "linktype": "url",
+                "fieldtype": "multilink",
+                "cached_url": "https://github.com/unfolding-io/Astrorante"
+              },
+              "icon": "arrow-right",
+              "label": "Github",
+              "surface": "surface-light",
+              "component": "link"
+            }
+          ],
+          "video": {
+            "id": 16347494,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/x/83c25be547/bananna.mp4",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 3
+                },
+                "content": [
+                  {
+                    "text": "Free and Open Source, It's Bananas!!! ",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "AstroRante is not only powerful but also accessible to everyone. Enjoy the benefits of our theme under the CC BY 4.0 License:",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Free to use for personal and commercial projects.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Customizable to meet your unique needs.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Community support and regular updates.",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          "opacity": "opacity-60",
+          "reverse": false,
+          "surface": "surface-dark",
+          "component": "banner",
+          "container": ""
+        },
+        {
+          "_uid": "93195563-7f82-4eba-bb97-deeb204ba829",
+          "title": "Tasty deals",
+          "offers": true,
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "You can show your happy hour deals here",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          "surface": "surface-dark",
+          "template": "cards",
+          "component": "menu_items",
+          "menu_items": [],
+          "accent_surface": "surface-light",
+          "menu_categories": [
+            "1ec252a7-8f72-445d-be03-9fb569c55f60",
+            "af369521-3b85-4899-b9a8-359b0d6a7aa7"
+          ]
+        }
+      ],
+      "surface": "",
+      "og_image": {
+        "id": 16337066,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1920x1280/fde48f6a9b/pexels-nuno-campos-756632-9351340.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "og_title": "Astrorante: a Tasty Theme for Your Restaurant.",
+      "component": "page",
+      "og_description": "AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant."
+    },
+    "published": true,
+    "slug": "index",
+    "path": "",
+    "full_slug": "index",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": null,
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    
+    "pinned": false,
+    "breadcrumbs": [],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-24T14:57:38.816Z",
+   
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "index",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 10,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+ 
+  {
+    "name": "About AstroRante",
+    "parent_id": 0,
+    "group_id": "dd752430-e862-45ab-9122-e51404d4d82a",
+    "alternates": [],
+    "created_at": "2024-06-30T09:42:49.320Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T14:07:35.006Z",
+    "published_at": "2024-07-09T14:07:34.985Z",
+    "id": 517202725,
+    "uuid": "647ecc80-c5d4-410b-8a9b-ca8267556f85",
+    "is_folder": false,
+    "content": {
+      "_uid": "268c318b-b983-4a67-87f0-1281d843be0b",
+      "body": [
+        {
+          "_uid": "946e27cd-3c4f-441b-9cf3-7a2f3eb0a40c",
+          "align": "",
+          "links": [
+            {
+              "_uid": "31f61bc3-3890-407d-ba3e-fece6a466271",
+              "href": {
+                "id": "",
+                "url": "https://unfolding.io",
+                "target": "_blank",
+                "linktype": "url",
+                "fieldtype": "multilink",
+                "cached_url": "https://unfolding.io"
+              },
+              "icon": "arrow-right",
+              "label": "unfolding.io",
+              "surface": "surface-primary",
+              "component": "link"
+            }
+          ],
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 1
+                },
+                "content": [
+                  {
+                    "text": "Astrorante is released under CC BY-ND 4.0",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "So you are free to use it as long as you give credits, if you don't want an attribution in the footer of your site you can purchase a license here.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "This template is created by Unfolding.io",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Unfolding is on a mission to help businesses create a lasting impact with durable and sustainable solutions.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Based on the beautiful coast of Ibiza, we’re inspired by the natural beauty around us and strive to bring that same sense of peace and tranquility to all of our projects. We aim to create a stress-free and enjoyable process for our clients, where we can work together to achieve outstanding results.",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 3
+                },
+                "content": [
+                  {
+                    "text": "Premium Support",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "If you need help with setting up your website or you are in need for custom integrations, don't hesitate to contact us at ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "hello@unfolding.io",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "mailto:hello@unfolding.io",
+                          "uuid": null,
+                          "anchor": null,
+                          "custom": null,
+                          "target": null,
+                          "linktype": "url"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "surface": " ",
+          "component": "richtext"
+        }
+      ],
+      "surface": "surface-dark",
+      "og_image": {
+        "id": 16347557,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1280x720/321a6ca984/astroranthero.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "og_title": "About AstroRante",
+      "component": "page",
+      "og_description": "About AstroRante"
+    },
+    "published": true,
+    "slug": "about-astrorante",
+    "path": null,
+    "full_slug": "about-astrorante",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": null,
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+   
+    "pinned": false,
+    "breadcrumbs": [],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-28T11:43:47.472Z",
+   
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "about-astrorante",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 30,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  }
+]

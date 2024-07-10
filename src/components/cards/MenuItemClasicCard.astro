@@ -1,0 +1,152 @@
+---
+import Picture from "@components/media/Picture.astro";
+import { renderRichText } from "@storyblok/astro";
+import { Icon } from "astro-icon/components";
+import Lightbox from "@components/media/Lightbox.vue";
+import Tooltip from "@components/helpers/Tooltip.vue";
+import { formatPrice } from "@util/translate";
+
+import { useTranslations, getLangFromUrl } from "@util/translate";
+
+interface Props {
+  content: MenuItemStoryblok;
+  show_offer?: boolean;
+  accent?: string;
+}
+const blok = Astro.props;
+let { content, show_offer, accent } = blok;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const prices = content?.price?.filter((price) => !price.is_offer);
+const offers = content?.price?.filter((price) => price.is_offer);
+show_offer = show_offer && offers && offers.length > 0;
+const show_price = prices && prices.length > 0;
+---
+
+<div class="min-w-[16rem] flex-1 @container">
+  <div
+    class={`${accent} @md:flex-row flex flex-col h-full rounded-lg overflow-hidden shadow-lg group`}
+  >
+    {
+      content.image?.id && (
+        <div
+          class={`image aspect-video overflow-hidden @md:aspect-square @md:flex-1`}
+        >
+          <Lightbox
+            className="block transition-all h-full"
+            client:visible
+            src={content.image.filename}
+          >
+            <Picture
+              src={content.image.filename}
+              alt={content.title}
+              sizes="20rem"
+              className="duration-500 h-full group-hover:grayscale-[100%] transition-all"
+              layout="fill"
+              breakpoints={[200, 320, 420, 640]}
+            />
+          </Lightbox>
+        </div>
+      )
+    }
+
+    {
+      !content.image?.id && (
+        <div
+          class={`image grid aspect-video place-items-center overflow-hidden bg-muted/20 bg-blend-overlay shadow-inner @md:aspect-square @md:w-1/4`}
+        >
+          <Icon
+            name={content?.category_icon || "food"}
+            class="mx-8 h-14 w-14 opacity-60"
+            is:inline
+          />
+        </div>
+      )
+    }
+
+    <div class="flex flex-1 flex-col gap-2 p-4 @md:h-full">
+      {
+        show_offer &&
+          offers?.map((offer) => (
+            <>
+              <div class="h-full">
+                <h3 class="text-xl">{offer.name}</h3>
+                <div
+                  class="text-sm"
+                  set:html={renderRichText(offer.offer_text)}
+                />
+              </div>
+              <div
+                set:html={formatPrice(offer.price)}
+                class={`ml-auto mt-auto text-xl font-bold`}
+              />
+            </>
+          ))
+      }
+      {
+        !show_offer && (
+          <h3 class="font-base line-clamp-5 flex w-full text-2xl">
+            <span>
+              {content.title}
+
+              {content.labels && content.labels.length > 0 && (
+                <>
+                  {content.labels.map((name) => (
+                    <Tooltip client:visible>
+                      <Icon name={name} class="h-7 w-7" />
+                      <span slot="tooltip"> {t("label." + name)}</span>
+                    </Tooltip>
+                  ))}
+                </>
+              )}
+            </span>
+          </h3>
+        )
+      }
+
+      {
+        content.intro && !show_offer && (
+          <div
+            class="text-overline line-clamp-5 text-pretty pt-1"
+            set:html={renderRichText(content.intro)}
+          />
+        )
+      }
+
+      {
+        content.allergic_ingredients &&
+          content.allergic_ingredients.length > 0 &&
+          !show_offer && (
+            <div class="tags flex w-full items-end justify-end gap-2">
+              {content.allergic_ingredients.map((name) => (
+                <Tooltip client:visible>
+                  <Icon name={name} class="h-7 w-7" />
+                  <span slot="tooltip"> {t("label." + name)}</span>
+                </Tooltip>
+              ))}
+            </div>
+          )
+      }
+
+      {
+        show_price && !show_offer && (
+          <div class="mt-auto self-end">
+            {prices.map((price, index) => (
+              <div class="flex justify-between gap-2 text-sm">
+                <span class={`text-sm uppercase tracking-wider`}>
+                  {price.name}
+                </span>
+
+                <span
+                  set:html={formatPrice(price.price)}
+                  class={`${index === 0 ? "text-base font-bold" : "text-base font-bold"} `}
+                />
+              </div>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>

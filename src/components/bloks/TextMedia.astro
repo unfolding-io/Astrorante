@@ -1,0 +1,157 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import VideoInline from "@components/media/VideoInline.vue";
+import Picture from "@components/media/Picture.astro";
+import Link from "@components/navigation/Link.astro";
+import Intersecting from "@components/helpers/Intersecting.vue";
+interface Props {
+  blok: TextMediaStoryblok;
+}
+
+const { blok } = Astro.props;
+
+const {
+  content,
+  video,
+  image,
+  surface,
+  container,
+  aspect_ratio,
+  reverse,
+  media_width,
+  layout,
+  align,
+  links,
+} = blok;
+
+const renderedRichText = renderRichText(content);
+
+function getSizes() {
+  if (!container) return `(min-width: 768px) ${media_width}vw, 100vw `;
+  if (container === "full-width")
+    return `(min-width: 768px) ${media_width}vw, 100vw `;
+  if (container === "breakout")
+    return `(min-width: var(--breakout-max-width)) calc(var(--breakout-max-width) * ${media_width} / 100 ), (min-width: 768px) ${media_width}vw, 100vw `;
+  return `(min-width: var(--content-max-width)) calc(var(--content-max-width) * ${media_width} / 100 ), (min-width: 768px) ${media_width}vw, 100vw `;
+}
+---
+
+<Intersecting
+  client:visible
+  {...storyblokEditable(blok)}
+  className={` ${surface || ""} `}
+>
+  <div
+    class={`${container && "content-grid py-8 md:py-0"} `}
+    style={`--media-col-width:${media_width}fr; --text-col-width:${
+      100 - parseFloat(media_width)
+    }fr`}
+  >
+    <div class={`${container || ""} text-media ${reverse && "reverse"} `}>
+      <div class={`text-media__container grid grid-flow-dense grid-cols-1`}>
+        <div class="relative">
+          <figure
+            class={`${container ? "grid place-items-center rounded-lg" : "md:h-svh"} parallax-wrap fade-up h-full sticky top-0 mx-auto grid place-items-start md:max-w-full md:overflow-hidden`}
+          >
+            {
+              !video?.filename && image?.filename && (
+                <Picture
+                  src={image.filename}
+                  alt={image.alt || image.name}
+                  className={`parallax fade-in ${container && `rounded-lg shadow-md`}`}
+                  sizes={getSizes()}
+                  ar={aspect_ratio}
+                  layout={layout || "fit"}
+                  artDirectives={[
+                    {
+                      media: "(max-width: 768px)",
+                      ar: 16 / 9,
+                      breakpoints: [320, 440, 640, 768],
+                    },
+                  ]}
+                />
+              )
+            }
+            {
+              video?.filename && (
+                <div
+                  class={` ${layout === "fill" ? "h-full" : "h-auto"} ${container && "rounded-lg shadow-md"} parallax relative overflow-hidden fade-in`}
+                >
+                  <VideoInline url={video.filename} client:visible>
+                    {image?.filename && (
+                      <Picture
+                        src={image.filename}
+                        alt={image.alt || image.name}
+                        className="fade-in parallax"
+                        sizes={getSizes()}
+                        ar={aspect_ratio}
+                        layout={layout || "fit"}
+                        artDirectives={[
+                          {
+                            media: "(max-width: 768px)",
+                            ar: 16 / 9,
+                            breakpoints: [320, 440, 640, 768],
+                          },
+                        ]}
+                      />
+                    )}
+                  </VideoInline>
+                </div>
+              )
+            }
+          </figure>
+        </div>
+
+        <div
+          class={`${!container && "px-4"} richtext max-w-2xl py-14 md:py-20 md:px-8 relative z-40 mx-auto grid content-center items-center justify-self-start ${align || ""} ${reverse && "md:col-start-1 md:row-start-1"}`}
+        >
+          <div class="scale-in grid h-fit grid-cols-1 gap-4">
+            <div set:html={renderedRichText} />
+
+            {
+              links && links.length > 0 && (
+                <div class="buttons inline-flex flex-wrap items-center gap-4">
+                  {links.map((link) => (
+                    <Link
+                      blok={{
+                        ...link,
+                      }}
+                    />
+                  ))}
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Intersecting>
+
+<style>
+  .text-media {
+    &__container {
+      @screen md {
+        grid-template-columns: var(--media-col-width) minmax(
+            22rem,
+            var(--text-col-width)
+          );
+      }
+    }
+    @screen md {
+      &.reverse {
+        .text-media__container {
+          grid-template-columns: minmax(22rem, var(--text-col-width)) var(
+              --media-col-width
+            );
+        }
+      }
+    }
+
+    .text-center {
+      .buttons {
+        @apply justify-center;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,89 @@
+---
+import {
+  api,
+  getPages,
+  getPosts,
+  getSettings,
+  getPage,
+} from "@util/storyblokApi";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import Layout from "@layouts/Layout.astro";
+import { translateUrl } from "@util/translate";
+import { SITE_LANG } from "astro:env/server";
+
+export async function getStaticPaths() {
+  try {
+    const { data } = (await api.get("cdn/spaces/me", {})) as SpaceObj;
+    const locales = [SITE_LANG, ...data.space.language_codes];
+
+    /* GET ALL PAGES AND POSTS IN ALL LANGUAGES */
+    const pages = locales.flatMap(async (lang, index) => {
+      const dataLang = index === 0 ? "default" : lang;
+      const settings = await getSettings(lang);
+
+      const pages = await getPages(
+        dataLang,
+        import.meta.env.DEV ? "draft" : "published",
+        settings,
+        locales,
+      );
+
+      const post = await getPosts(
+        dataLang,
+        import.meta.env.DEV ? "draft" : "published",
+        settings,
+        locales,
+      );
+
+      return [...pages, ...post];
+    });
+
+    const routes = await Promise.all(pages);
+
+    return routes.flat();
+  } catch (e) {
+    console.log("Error", e);
+
+    return [
+      {
+        params: {
+          slug: undefined,
+        },
+      },
+    ];
+  }
+}
+let { settings, story, locales } = Astro.props;
+
+if (!settings) {
+  return Astro.redirect("/setup");
+}
+
+const status = import.meta.env.DEV ? "draft" : "published";
+
+if (import.meta.env.DEV) {
+  /* LOOK FOR CONTENT UPDATES IN DEV MODE */
+  const { slug, lang } = Astro.props as RouteParams;
+
+  try {
+    settings = await getSettings(lang);
+    story = await getPage(slug, lang);
+  } catch (e) {
+    console.log("error", e);
+  }
+}
+
+const { og_title, og_description, og_image } = story;
+const localeUrls = translateUrl(Astro.url, locales || [SITE_LANG]);
+
+const meta = {
+  title: og_title || "404",
+  description: og_description || "page not found",
+  og_image: "",
+  image: og_image?.filename || "",
+};
+---
+
+<Layout meta={meta} {settings} {localeUrls}>
+  <StoryblokComponent blok={story} {status} />
+</Layout>

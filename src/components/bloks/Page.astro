@@ -1,0 +1,15 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+/* import Layout from "@layouts/Layout.astro"; */
+interface Props {
+  blok: PageStoryblok;
+  status?: "draft" | "published" | undefined;
+}
+const { blok, status } = Astro.props;
+const { surface } = blok;
+---
+
+<main {...storyblokEditable(blok)} class={`${surface || ""} min-h-svh`}>
+  {blok.body?.map((blok) => <StoryblokComponent blok={blok} {status} />)}
+</main>

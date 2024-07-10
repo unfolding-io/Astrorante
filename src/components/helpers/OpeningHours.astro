@@ -1,0 +1,17 @@
+---
+import { mergeOpeningHours } from "@util/translate";
+const { opening_hours, lang } = Astro.props;
+
+const open = mergeOpeningHours(opening_hours, lang);
+---
+
+<ul>
+  {
+    open.map((day) => (
+      <li class="mx-auto flex max-w-xs justify-between">
+        <strong class="pr-4">{day.day}:</strong>
+        <div class="contents text-nowrap" set:html={day.hours} />
+      </li>
+    ))
+  }
+</ul>

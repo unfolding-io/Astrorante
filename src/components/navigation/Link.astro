@@ -1,0 +1,42 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import { Icon } from "astro-icon/components";
+import { SITE_LANG } from "astro:env/server";
+import { getLangFromUrl } from "@util/translate";
+
+const lang = getLangFromUrl(Astro.url);
+const { blok, className, hideLabel } = Astro.props;
+const { surface, label, icon, target, href } = blok;
+
+const linkTarget =
+  target || blok?.href?.target == "_blank" ? "_blank" : "_self";
+
+const linkRel = target ? "noopener noreferrer nofollow" : "";
+let link = "";
+
+if (href?.linktype == "story") {
+  link =
+    href.cached_url == "index"
+      ? "/"
+      : `${!href?.prep ? "/" : ""}${href.cached_url}`;
+} else if (href?.linktype == "email") {
+  link = `mailto:${href.cached_url}`;
+} else {
+  link = href.url;
+  if (href.url.startsWith("/") && lang !== SITE_LANG) {
+    link = `/${lang}${link}`;
+  }
+}
+---
+
+<a
+  {...storyblokEditable(blok)}
+  href={link}
+  target={linkTarget}
+  rel={linkRel}
+  class={`${surface || ""}  ${className || "btn"}`}
+  aria-label={label}
+>
+  {icon && <Icon name={icon} is:inline class={className ? "" : "h-8 w-8"} />}
+  {!hideLabel && <span class="min-w-0">{label}</span>}
+</a>

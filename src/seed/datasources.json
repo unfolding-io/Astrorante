@@ -1,0 +1,317 @@
+[
+  {
+    "name": "Surface",
+    "slug": "surface",
+    "dimensions": [],
+    "datasource_entries": [
+      {
+        "name": "Light",
+        "value": "surface-light"
+      },
+      {
+        "name": "Dark",
+        "value": "surface-dark"
+      },
+      {
+        "name": "Primary",
+        "value": "surface-primary"
+      },
+      {
+        "name": "Secondary",
+        "value": "surface-secondary"
+      },
+      {
+        "name": "Accent",
+        "value": "surface-accent"
+      },
+      {
+        "name": "Warning",
+        "value": "surface-warning"
+      },
+      {
+        "name": "Danger",
+        "value": "surface-danger"
+      },
+      {
+        "name": "info",
+        "value": "surface-info"
+      },
+      {
+        "name": "Success",
+        "value": "surface-success"
+      }
+    ]
+  },
+  {
+    "name": "Icons",
+    "slug": "icons",
+    "dimensions": [],
+    "datasource_entries": [
+      {
+        "name": "Arrow Right",
+        "value": "arrow-right"
+      },
+      {
+        "name": "Arrow Left",
+        "value": "arrow-left"
+      },
+      {
+        "name": "Burger",
+        "value": "burger"
+      },
+      {
+        "name": "External",
+        "value": "external"
+      },
+      {
+        "name": "Fish",
+        "value": "fish_food"
+      },
+      {
+        "name": "Money",
+        "value": "money"
+      },
+      {
+        "name": "Download",
+        "value": "download"
+      },
+      {
+        "name": "Home",
+        "value": "home"
+      },
+      {
+        "name": "Coffee",
+        "value": "coffee"
+      },
+      {
+        "name": "Cocktail",
+        "value": "cocktail"
+      },
+      {
+        "name": "Phone",
+        "value": "phone"
+      },
+      {
+        "name": "Email",
+        "value": "email"
+      },
+      {
+        "name": "Phone",
+        "value": "phone"
+      },
+      {
+        "name": "Menu",
+        "value": "menu"
+      },
+      {
+        "name": "Facebook",
+        "value": "facebook"
+      },
+      {
+        "name": "Instagram",
+        "value": "instagram"
+      },
+      {
+        "name": "X (twitter)",
+        "value": "x"
+      },
+      {
+        "name": "Youtube",
+        "value": "youtube"
+      },
+      {
+        "name": "News",
+        "value": "news"
+      },
+      {
+        "name": "Map",
+        "value": "map"
+      },
+      {
+        "name": "Heart",
+        "value": "heart"
+      },
+      {
+        "name": "Whatsapp",
+        "value": "whatsapp"
+      },
+      {
+        "name": "Tripadvisor",
+        "value": "tripadvisor"
+      },
+      {
+        "name": "Instagram",
+        "value": "instagram"
+      },
+      {
+        "name": "Search",
+        "value": "search"
+      }
+    ]
+  },
+  {
+    "name": "Label",
+    "slug": "label",
+    "dimensions": [],
+    "datasource_entries": [
+      {
+        "name": "Organic",
+        "value": "organic"
+      },
+      {
+        "name": "Low Carb",
+        "value": "low-carb"
+      },
+      {
+        "name": "Local",
+        "value": "local"
+      },
+      {
+        "name": "Vegan",
+        "value": "vegan"
+      },
+      {
+        "name": "Raw",
+        "value": "raw"
+      },
+      {
+        "name": "Vegetarian",
+        "value": "vegetarian"
+      },
+      {
+        "name": "Bio",
+        "value": "bio"
+      }
+    ]
+  },
+  {
+    "name": "Allergic Ingredients",
+    "slug": "allergic-ingredients",
+    "dimensions": [],
+    "datasource_entries": [
+      {
+        "name": "Fish",
+        "value": "fish"
+      },
+      {
+        "name": "Soy",
+        "value": "soy"
+      },
+      {
+        "name": "Molluscs",
+        "value": "molluscs"
+      },
+      {
+        "name": "Peanut",
+        "value": "peanut"
+      },
+      {
+        "name": "Milk",
+        "value": "milk"
+      },
+      {
+        "name": "Sulphur Dioxide",
+        "value": "sulphurdioxide"
+      },
+      {
+        "name": "Mustard",
+        "value": "mustard"
+      },
+      {
+        "name": "Lupin",
+        "value": "lupin"
+      },
+      {
+        "name": "Crustaceans",
+        "value": "crustacens"
+      },
+      {
+        "name": "Celery ",
+        "value": "celery"
+      },
+      {
+        "name": "Eggs",
+        "value": "eggs"
+      },
+      {
+        "name": "Sesame",
+        "value": "sesame"
+      },
+      {
+        "name": "Tree Nut",
+        "value": "treenut"
+      },
+      {
+        "name": "Wheat",
+        "value": "wheat"
+      }
+    ]
+  },
+  {
+    "name": "Fonts",
+    "slug": "font",
+    "dimensions": [],
+    "datasource_entries": [
+      {
+        "name": "System UI (sans-serif)",
+        "value": "--font-system-ui"
+      },
+      {
+        "name": "Humanist (sans-serif)",
+        "value": "--font-humanist"
+      },
+      {
+        "name": "Geometric Humanist (sans-serif)",
+        "value": "--font-geometric-humanist"
+      },
+      {
+        "name": "Classical Humanist (sans-serif)",
+        "value": "--font-classical-humanist"
+      },
+      {
+        "name": "Neo-Grotesque (sans-serif)",
+        "value": "--font-neo-grotesque"
+      },
+      {
+        "name": "Industrial (sans-serif)",
+        "value": "--font-industrial"
+      },
+      {
+        "name": "Rounded Sans (sans-serif)",
+        "value": "--font-rounded-sans"
+      },
+      {
+        "name": "Transitional (serif)",
+        "value": "--font-transitional"
+      },
+      {
+        "name": "Old Style (serif)",
+        "value": "--font-old-style"
+      },
+      {
+        "name": "Antique (serif)",
+        "value": "--font-antique"
+      },
+      {
+        "name": "Didone (serif)",
+        "value": "--font-didone"
+      },
+      {
+        "name": "Slab Serif (serif)",
+        "value": "--font-slab-serif"
+      },
+      {
+        "name": "Monospace Slab Serif",
+        "value": "--font-monospace-slab-serif"
+      },
+      {
+        "name": "Monospace Code",
+        "value": "--font-monospace-code"
+      },
+      {
+        "name": "Handwritten",
+        "value": "--font-handwritten"
+      }
+    ]
+  }
+]

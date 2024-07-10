@@ -1,0 +1,42 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import Link from "@components/navigation/Link.astro";
+import Intersecting from "@components/helpers/Intersecting.vue";
+interface Props {
+  blok: TextMediaStoryblok;
+}
+
+const { blok } = Astro.props;
+
+const { content, surface, align, links } = blok;
+
+const renderedRichText = renderRichText(content);
+---
+
+<Intersecting
+  client:visible
+  {...storyblokEditable(blok)}
+  className={`${surface || ""}`}
+>
+  <div class="content-grid">
+    <div
+      class={`richtext max-w-3xl ${align || ""} scale-in grid h-fit grid-cols-1 gap-8 py-14 md:py-20`}
+    >
+      <div set:html={renderedRichText} class="text-ellipsis" />
+
+      {
+        links && links.length > 0 && (
+          <div class="inline-flex flex-wrap gap-4">
+            {links.map((link) => (
+              <Link
+                blok={{
+                  ...link,
+                }}
+              />
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Intersecting>

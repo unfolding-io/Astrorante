@@ -1,0 +1,456 @@
+[
+  {
+    "name": "Getting Started",
+    "parent_id": 517202717,
+    "group_id": "7afbecb6-288a-45a8-b4f5-12d9567202b5",
+    "alternates": [],
+    "created_at": "2024-06-30T09:42:49.608Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-07-09T13:27:49.620Z",
+    "published_at": "2024-07-09T13:27:49.590Z",
+    "id": 517202726,
+    "uuid": "72995780-9edf-4792-9419-dd87deb54dcb",
+    "is_folder": false,
+    "content": {
+      "_uid": "e35890b5-ede1-4a78-bc50-8195ec67f422",
+      "body": [
+        {
+          "_uid": "c61f06b7-2852-4ead-b8ee-2af66452eefd",
+          "align": "text-right ml-auto justify-items-end",
+          "image": {
+            "id": 16437209,
+            "alt": "",
+            "name": "",
+            "focus": "",
+            "title": "",
+            "source": "",
+            "filename": "https://a.storyblok.com/f/294188/1920x1290/18874402ca/screencapture-localhost-4321-setup-2024-06-30-16_20_30.png",
+            "copyright": "",
+            "fieldtype": "asset",
+            "meta_data": {
+
+            },
+            "is_private": false,
+            "is_external_url": false
+          },
+          "links": [],
+          "video": {
+            "id": null,
+            "alt": null,
+            "name": "",
+            "focus": null,
+            "title": null,
+            "source": null,
+            "filename": "",
+            "copyright": null,
+            "fieldtype": "asset",
+            "meta_data": {
+
+            }
+          },
+          "banner": false,
+          "layout": "fit",
+          "content": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 2
+                },
+                "content": [
+                  {
+                    "text": "Sync your space",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Go to ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "https://localhost:4321/setup",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "https://localhost:4321/setup",
+                          "uuid": null,
+                          "anchor": null,
+                          "custom": null,
+                          "target": null,
+                          "linktype": "url"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": " .",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Now sync your Datasources, Components, and stories. it is best to first ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "delete ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "before ",
+                    "type": "text"
+                  },
+                  {
+                    "text": "syncing",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ".",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "After this you are ready to go.",
+                    "type": "text"
+                  },
+                  {
+                    "type": "hard_break"
+                  },
+                  {
+                    "type": "hard_break"
+                  }
+                ]
+              }
+            ]
+          },
+          "reverse": false,
+          "surface": "surface-secondary",
+          "component": "text_media",
+          "container": "breakout",
+          "media_width": "66.66",
+          "aspect_ratio": "1.777",
+          "image_lightbox": true
+        }
+      ],
+      "intro": "Ge your site up and running",
+      "title": "Getting Stared",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "First head over to ",
+                "type": "text"
+              },
+              {
+                "text": "Storyblok",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://www.storyblok.com/",
+                      "uuid": null,
+                      "anchor": null,
+                      "target": "_blank",
+                      "linktype": "url"
+                    }
+                  }
+                ]
+              },
+              {
+                "text": " and create a space.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Here we need to collect 3 things:",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Space ID",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Space Preview Token",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Personal Access Token (",
+                        "type": "text"
+                      },
+                      {
+                        "text": "link",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "href": "https://app.storyblok.com/#/me/account?tab=token",
+                              "uuid": null,
+                              "anchor": null,
+                              "target": "_blank",
+                              "linktype": "url"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "text": ") ",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Now clone our repo and rename the ",
+                "type": "text"
+              },
+              {
+                "text": "env.txt ",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "text": "to ",
+                "type": "text"
+              },
+              {
+                "text": ".env.",
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "text": "Set up your .env",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "code_block",
+            "attrs": {
+              "class": "language-None"
+            },
+            "content": [
+              {
+                "text": "STORYBLOK_PREVIEW_TOKEN=XXX\nSTORYBLOK_PERSONAL_TOKEN=XXX\nSTORYBLOK_SPACE_ID=000\nLOCALE=en-US\nCURRENCY=USD\nSITE_LANG=en",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "text": "Install & run dev",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "code_block",
+            "attrs": {
+              "class": ""
+            },
+            "content": [
+              {
+                "text": "$ npm install",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "code_block",
+            "attrs": {
+              "class": ""
+            },
+            "content": [
+              {
+                "text": "$ npm run dev",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      "surface": "surface-dark",
+      "og_image": {
+        "id": 16337066,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1920x1280/fde48f6a9b/pexels-nuno-campos-756632-9351340.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "og_title": "Getting Started",
+      "component": "post",
+      "thumbnail": {
+        "id": 16437262,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/1280x1920/a456fa212b/pexels-jorge-acre-239933086-16625517.jpg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {
+
+        },
+        "is_private": false,
+        "is_external_url": false
+      },
+      "og_description": "Getting Started"
+    },
+    "published": true,
+    "slug": "getting-started",
+    "path": null,
+    "full_slug": "news/getting-started",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 517202717,
+      "uuid": "4a2e917a-b8cb-4119-9ec5-990e482c02da",
+      "name": "News",
+      "slug": "news",
+      "disble_fe_editor": false
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+   
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 517202717,
+        "name": "News",
+        "parent_id": 0,
+        "disble_fe_editor": false,
+        "path": null,
+        "slug": "news",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-27T19:42:06.329Z",
+    
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "news/getting-started",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 10,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  }
+
+]

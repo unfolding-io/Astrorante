@@ -1,0 +1,118 @@
+---
+import { SEO } from "astro-seo";
+import { SITE_LANG } from "astro:env/server";
+import { getLangFromUrl } from "@util/translate";
+import "@styles/globals.css";
+interface Meta {
+  title: string;
+  description: string;
+  og_image: string;
+  image: string;
+}
+interface Props {
+  title?: string;
+  meta: Meta;
+  settings?: SettingsStoryblok;
+  localeUrls?: Record<string, string>[];
+}
+
+const { meta } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+
+/* const t = useTranslations(lang); */
+---
+
+<!doctype html>
+<html lang={lang || SITE_LANG}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{meta.title}</title>
+    <SEO
+      title={meta.title}
+      description={meta.description}
+      openGraph={{
+        basic: {
+          title: meta.title,
+          type: "website",
+          image: meta.og_image,
+        },
+      }}
+      extend={{
+        meta: [
+          {
+            name: "og:description",
+            content: meta.description,
+          },
+          {
+            name: "social:image",
+            content: meta.image,
+          },
+          {
+            name: "social:button",
+            content: "learn more",
+          },
+          {
+            name: "twitter:image",
+            content: meta.og_image,
+          },
+          { name: "twitter:card", content: "summary_large_image" },
+          { name: "twitter:title", content: meta.title },
+          { name: "twitter:description", content: meta.description },
+        ],
+      }}
+    />
+    <style>
+      :root {
+        --font-sysem-ui: theme(fontFamily.system-ui);
+        --dark-fg: 247 254 231;
+        --dark-bg: 64 64 64;
+        --light-fg: 64 64 64;
+        --light-bg: 247 254 231;
+        --primary-fg: 247 254 231;
+        --primary-bg: 20 184 166;
+        --secondary-fg: 13 148 136;
+        --secondary-bg: 217 249 157;
+        --accent-fg: 247 254 231;
+        --accent-bg: 105 150 57;
+        --info-fg: 247 254 231;
+        --info-bg: 56 189 248;
+        --warning-fg: 247 254 231;
+        --warning-bg: 217 119 6;
+        --danger-fg: 247 254 231;
+        --danger-bg: 248 113 113;
+        --success-fg: 247 254 231;
+        --success-bg: 132 204 22;
+        --font-weight-body: 400;
+        --font-weight-heading: 900;
+        --font-body: var(--font-system-ui);
+        --font-headings: var(--font-system-ui);
+        --font-body: var(--font-sysem-ui);
+        --font-weight-body: 400;
+        --font-heading: var(--font-sysem-ui);
+        --font-weight-heading: 700;
+
+        --muted: 120 120 120;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+
+        --ring: 0 0% 3.9%;
+        --radius: 0.5rem;
+
+        --padding-inline: 1rem;
+        --content-max-width: 900px;
+        --breakout-max-width: 1200px;
+      }
+    </style>
+  </head>
+  <body class="surface-primary">
+    <header class="pointer-events-none fixed inset-x-0 top-0 z-40">
+      <nav class="flex items-center justify-end gap-3 p-3 text-xl sm:text-3xl">
+      </nav>
+    </header>
+    <slot />
+  </body>
+</html>

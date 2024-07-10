@@ -1,0 +1,284 @@
+---
+import Picture from "@components/media/Picture.astro";
+import { renderRichText } from "@storyblok/astro";
+import { Icon } from "astro-icon/components";
+import Lightbox from "@components/media/Lightbox.vue";
+import Tooltip from "@components/helpers/Tooltip.vue";
+import { useTranslations, getLangFromUrl, formatPrice } from "@util/translate";
+
+interface Props {
+  content: MenuItemStoryblok;
+  show_offer?: boolean;
+  accent?: string;
+}
+const blok = Astro.props;
+let { content, show_offer, accent } = blok;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const prices = content?.price?.filter((price) => !price.is_offer);
+const offers = content?.price?.filter((price) => price.is_offer);
+show_offer = show_offer && offers && offers.length > 0;
+
+const show_price = prices && prices.length > 0;
+
+const getLayout = () => {
+  let cls = "card";
+  if (content.image?.id) {
+    cls += "-image";
+  }
+  if (content.intro) {
+    cls += "-intro";
+  }
+  if (
+    content.allergic_ingredients &&
+    content?.allergic_ingredients?.length > 0
+  ) {
+    cls += "-tags";
+  }
+  if (prices && prices.length > 1) {
+    cls += "-price";
+  }
+
+  return cls;
+};
+---
+
+<div class={`menu-item relative grid offer ${getLayout()} h-fit`}>
+  {
+    content.image?.id && (
+      <div class="image">
+        <Lightbox
+          className="aspect-square overflow-hidden rounded-full block transition-all    "
+          client:visible
+          src={content.image.filename}
+        >
+          <Picture
+            src={content.image.filename}
+            alt={content.title}
+            sizes="5rem"
+            layout="fill"
+            breakpoints={[200, 320, 420, 640]}
+          />
+        </Lightbox>
+      </div>
+    )
+  }
+
+  <div class="info">
+    <h3 class="font-base line-clamp-5 flex w-full text-2xl">
+      <span>
+        {content.title}
+
+        {
+          content.labels && content.labels.length > 0 && (
+            <>
+              {content.labels.map((name) => (
+                <Tooltip client:visible>
+                  <Icon name={name} class="h-7 w-7" />
+                  <span slot="tooltip"> {t("label." + name)}</span>
+                </Tooltip>
+              ))}
+            </>
+          )
+        }
+      </span>
+
+      <div class="flex-grow border-b border-current opacity-65"></div>
+    </h3>
+
+    {
+      show_offer && (
+        <div class={`${accent} my-3 flex flex-wrap rounded-sm p-2`}>
+          {offers?.map((offer) => (
+            
+              <div>
+                <div class="text-lg font-bold -mt-1">{offer.name}</div>
+                <div
+                  class="text-sm"
+                  set:html={renderRichText(offer.offer_text)}
+                />
+              </div>
+              <div
+                set:html={formatPrice(offer.price)}
+                class={`ml-auto text-xl font-bold`}
+              />
+         
+          ))}
+        </div>
+      )
+    }
+
+    {
+      content.intro && (
+        <div
+          class="max-w-lg text-pretty pt-1"
+          set:html={renderRichText(content.intro)}
+        />
+      )
+    }
+  </div>
+  {
+    content.allergic_ingredients && content.allergic_ingredients.length > 0 && (
+      <div class="tags flex w-full flex-wrap items-end justify-end gap-2">
+        {content.allergic_ingredients.map((name) => (
+          <Tooltip client:visible>
+            <Icon name={name} class="h-7 w-7" />
+            <span slot="tooltip"> {t("label." + name)}</span>
+          </Tooltip>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    show_price && (
+      <div
+        class={`price grid auto-rows-min gap-1 ${prices && prices.length > 1 && "mt-2"}`}
+      >
+        {show_price &&
+          prices.map((price, index) => (
+            <div class={`flex justify-between gap-2 text-sm`}>
+              <span class={`text-sm tracking-wider`}>{price.name}</span>
+              <span
+                set:html={formatPrice(price.price)}
+                class={`${index === 0 ? "text-base font-bold" : "text-base font-bold"} `}
+              />
+            </div>
+          ))}
+      </div>
+    )
+  }
+</div>
+
+<style lang="postcss">
+    .menu-item {
+        @apply grid gap-y-2 gap-x-4 max-w-lg md:max-w-full mx-auto w-full;
+
+        grid-template-columns: 1fr 1fr min(6.5rem, 25vw);
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "💁 💁 💲" ;
+
+        &.card, &.card-intro {
+            grid-template-columns: 1fr 1fr auto; 
+        }
+        &.card-image {
+            grid-template-rows: auto 1fr;
+            @apply row-span-1 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💲 💲 📷";  
+        }
+        &.card-image-intro {
+            @apply row-span-2 sm:col-span-2 lg:col-span-1;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💁 💁 💲";  
+        }
+
+         &.card-image-tags  {
+            grid-template-rows: auto 1.2rem auto 1fr;
+            @apply row-span-1 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💲 💲 📷" 
+        "🌞 🌞 📷" 
+        ". . 📷";
+        }
+
+        &.card-image-intro-tags-price  {
+            
+            @apply row-span-2 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💁 💁 🌞"
+        "💲 💲 💲";
+        }
+
+        &.card-image-intro-tags  {
+            
+            @apply row-span-2 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "🌞 🌞 💲";
+        }
+
+        &.card-intro-tags {
+            @apply row-span-1;
+            grid-template-columns: 1fr 1fr auto; 
+            grid-template-areas: 
+        "💁 💁 💲" 
+        "🌞 🌞 🌞";
+        }
+
+
+
+        &.card-intro-tags-price  {
+            
+            @apply sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 💲" 
+        "💁 💁 💲" 
+        "🌞 🌞 🌞";
+        } 
+
+        &.card-intro-price {
+            @apply sm:col-span-2 lg:col-span-1 ;
+            grid-template-areas: 
+        "💁 💁 💲" 
+        "💁 💁 💲";
+        } 
+
+          &.card-image-intro-price  {
+            
+            @apply row-span-2 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💁 💁 🌞" 
+        "💲 💲 💲";
+        }
+
+        &.card-tags {
+            @apply row-span-1;
+            grid-template-columns: 1fr 1fr auto; 
+            grid-template-areas: 
+        "💁 💁 💲" 
+        "🌞 🌞 🌞";
+        }
+
+         &.card-image-price {        
+            @apply row-span-2 sm:col-span-2 lg:col-span-1;
+            grid-template-areas: 
+        "💁 💁 📷" 
+        "💲 💲 📷";
+
+        }
+
+        &.card-price {
+            
+            @apply row-span-1;
+            grid-template-areas: 
+        "💁 💁 💁" 
+        "💲 💲 💲";
+
+        }
+
+ 
+        .price {
+            grid-area: 💲;
+        }
+        .image {
+            grid-area: 📷;
+        }
+        .info {
+            grid-area: 💁;
+            @apply text-balance;
+        }
+        .tags {
+            grid-area: 🌞;
+        }
+    }
+  
+</style>

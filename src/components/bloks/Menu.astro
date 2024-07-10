@@ -1,0 +1,68 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import { getMenu } from "@util/storyblokApi";
+import MenuItemCard from "@components/cards/MenuItemCard.astro";
+import { getLangFromUrl } from "@util/translate";
+
+interface Props {
+  blok: MenusStoryblok;
+  lang: string;
+  status: StoryStatus;
+}
+
+const { blok, status } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+const { surface } = blok;
+
+const stories = await getMenu({
+  status: status || "published",
+  lang: lang || "en",
+  categories: blok.menus || [],
+});
+---
+
+<section
+  class={`content-grid py-14 ${surface || ""}`}
+  {...storyblokEditable(blok)}
+>
+  {
+    stories.categories && stories.categories.length > 1 && (
+      <ul
+        class={`breakout sticky top-0 z-30 mb-8 flex flex-wrap justify-start gap-2 py-2`}
+      >
+        {stories.categories.map((cat) => (
+          <li class="flex gap-2">
+            <a class={`btn-sm`} href={`#${cat.slug}`}>
+              {cat.content.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  <div class="breakout grid gap-28">
+    {
+      stories.menu.map((cat) => (
+        <div class="grid scroll-mt-20 gap-8 md:gap-14" id={cat.category.slug}>
+          <div>
+            <h2 class="text-4xl uppercase">{cat.category.content.title}</h2>
+            {cat.category?.content?.content && (
+              <div
+                class="richtext max-w-xl text-balance"
+                set:html={renderRichText(cat.category.content.content)}
+              />
+            )}
+          </div>
+
+          <div class="grid grid-flow-dense grid-cols-1 gap-10 sm:grid-cols-2 xl:gap-x-24">
+            {cat.items.map((item) => (
+              <MenuItemCard content={item} />
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

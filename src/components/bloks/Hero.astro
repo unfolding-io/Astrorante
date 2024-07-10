@@ -1,0 +1,115 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+/* import { Icon } from "astro-icon/components"; */
+import VideoInline from "@components/media/VideoInline.vue";
+import Picture from "@components/media/Picture.astro";
+import Link from "@components/navigation/Link.astro";
+
+interface Props {
+  blok: HeroStoryblok;
+}
+
+const { blok } = Astro.props;
+const {
+  links,
+  title,
+  content,
+  video,
+  thumbnail,
+  surface,
+  bg_opacity,
+  accent_color,
+} = blok;
+
+const text = renderRichText(content);
+---
+
+<div
+  style={`--accent-color: rgb(var(${accent_color}));`}
+  {...storyblokEditable(blok)}
+  class={`${surface || ""} hero relative grid grid-cols-1 items-center parallax-wrap overflow-hidden  `}
+>
+  {
+    thumbnail && (
+      <div class={`parallax absolute inset-0 ${bg_opacity || ""}`}>
+        {video?.filename && (
+          <VideoInline url={video.filename} client:visible className="">
+            {thumbnail?.filename && (
+              <Picture
+                src={thumbnail.filename}
+                alt={thumbnail.alt || title}
+                sizes={`100vw`}
+                ar={21 / 9}
+                layout="fill"
+                breakpoints={[320, 500, 760, 960]}
+                loading="eager"
+                artDirectives={[
+                  {
+                    media: "(max-width: 768px)",
+                    ar: 1 / 1,
+                    breakpoints: [320, 440, 640, 768],
+                  },
+                ]}
+              />
+            )}
+          </VideoInline>
+        )}
+        {!video?.filename && (
+          <Picture
+            src={thumbnail.filename}
+            alt={thumbnail.alt || title}
+            sizes={`100vw`}
+            ar={21 / 9}
+            layout="fill"
+            className="parallax"
+            loading="eager"
+            breakpoints={[320, 500, 760, 960]}
+            artDirectives={[
+              {
+                media: "(max-width: 768px)",
+                ar: 1 / 1,
+                breakpoints: [320, 440, 640, 768],
+              },
+            ]}
+          />
+        )}
+      </div>
+    )
+  }
+
+  <div class="content-grid relative h-fit">
+    <div class="grid max-w-3xl grid-cols-1 gap-3 text-balance py-20">
+      <h1 class="text-5xl md:text-6xl" set:html={title} />
+      {content && <div class="no-lead text-xl" set:html={text} />}
+      {
+        links && links.length > 0 && (
+          <div class="mt-2 flex w-fit gap-2">
+            {links.map((link) => (
+              <Link blok={link} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  @screen md {
+    .hero {
+      min-height: max(100svh, 30rem);
+    }
+  }
+
+  .hero {
+    h1 {
+      strong,
+      b,
+      bold {
+        @apply underline;
+        font-weight: inherit;
+        color: var(--accent-color);
+      }
+    }
+  }
+</style>

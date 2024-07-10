@@ -1,0 +1,118 @@
+---
+import { api, getPostsData, getSettings } from "@util/storyblokApi";
+import { renderRichText } from "@storyblok/astro";
+import Layout from "@layouts/Layout.astro";
+import PostCard from "@components/cards/PostCard.astro";
+import { SITE_LANG } from "astro:env/server";
+import Link from "@components/navigation/Link.astro";
+import { translateUrl, useTranslations } from "@util/translate";
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const { data } = (await api.get("cdn/spaces/me", {})) as SpaceObj;
+  const locales = [SITE_LANG, ...data.space.language_codes];
+
+  /* GET ALL PAGES */
+  const pages = locales.flatMap(async (lang, index) => {
+    const dataLang = index === 0 ? "default" : lang;
+    const status = import.meta.env.DEV ? "draft" : "published";
+    const post = await getPostsData(dataLang, status);
+    const settings = await getSettings(lang);
+    const indexPages = paginate(post, { pageSize: 10 });
+
+    return indexPages.map((page: any) => ({
+      params: {
+        page: page.params.page,
+        lang: dataLang === "default" ? undefined : dataLang,
+      },
+      props: { ...page.props, status, settings, locales },
+    }));
+  });
+
+  const routes = await Promise.all(pages);
+  return routes.flat();
+}
+let { lang } = Astro.params;
+let { page, settings, locales } = Astro.props;
+const pageLang = !lang ? SITE_LANG : lang;
+const t = useTranslations(pageLang);
+
+const { next, prev } = page.url;
+const {
+  blog_title,
+  blog_content,
+  blog_og_title,
+  blog_og_description,
+  blog_og_image,
+  surface_page,
+} = settings;
+
+const localeUrls = translateUrl(Astro.url, locales);
+const surface_accent =
+  surface_page === "surface-secondary"
+    ? "surface-primary"
+    : "surface-secondary";
+
+const meta = {
+  title: blog_og_title,
+  description: blog_og_description,
+  og_image: "",
+  image: blog_og_image?.filename,
+};
+---
+
+<Layout {meta} {settings} {localeUrls}>
+  <section class={surface_page || "surfce-light"}>
+    <div class="content-grid min-h-svh">
+      <div class="mx-w-lg mx-auto grid gap-3 pt-20 text-center">
+        <h1 class="text-5xl md:text-6xl" set:html={blog_title} />
+        <div
+          class="richtext text-balance"
+          set:html={renderRichText(blog_content)}
+        />
+      </div>
+      <div
+        class="breakout grid grid-cols-1 gap-4 px-4 py-14 pt-16 sm:grid-cols-2 xl:grid-cols-2"
+      >
+        {
+          page.data.map((story: PostStoryblok, index: number) => (
+            <PostCard
+              {...story}
+              reverse={index % 2 === 0}
+              accent={surface_accent}
+            />
+          ))
+        }
+      </div>
+
+      <div class="mt-auto pb-8 pt-14">
+        <div class="flex justify-end gap-4">
+          {
+            prev && (
+              <Link
+                blok={{
+                  href: {
+                    url: lang === undefined ? `${prev}` : `/${lang}${prev}`,
+                  },
+                  label: t("previous"),
+                }}
+              />
+            )
+          }
+
+          {
+            next && (
+              <Link
+                blok={{
+                  href: {
+                    url: lang === undefined ? `${next}` : `/${lang}${next}`,
+                  },
+                  label: t("next"),
+                }}
+              />
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

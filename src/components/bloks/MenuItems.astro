@@ -1,0 +1,108 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import { getMenu, api } from "@util/storyblokApi";
+import type { ISbStories } from "@storyblok/astro";
+import MenuItemCard from "@components/cards/MenuItemCard.astro";
+import MenuItemClasicCard from "@components/cards/MenuItemClasicCard.astro";
+
+interface Props {
+  blok: MenuItemsStoryblok;
+  lang: string;
+  status: StoryStatus;
+}
+
+const { blok, lang, status } = Astro.props;
+const {
+  content,
+  title,
+  offers,
+  menu_categories,
+  surface,
+  menu_items,
+  template,
+  accent_surface,
+} = blok;
+let stories: MenuItemStoryblok[] | [] = [];
+
+/* get menu_categories */
+if (menu_categories && menu_categories.length > 0) {
+  const menuCategories = await getMenu({
+    status: status || "published",
+    lang: lang || "en",
+    categories: menu_categories || [],
+  });
+  const items = menuCategories.menu.flatMap((cat) =>
+    cat.items.map((item) => {
+      return {
+        ...item,
+        category_icon: cat.category.content.icon,
+      };
+    }),
+  );
+
+  stories = items;
+}
+
+/* get menu_items */
+if (menu_items && menu_items.length > 0) {
+  const items = (await api.get(`cdn/stories`, {
+    content_type: "menu_item",
+    version: status || "published",
+    by_uuids_ordered: menu_items.join(","),
+    language: lang,
+    per_page: 100,
+  })) as ISbStories;
+
+  stories = [
+    ...stories,
+    ...(items.data.stories.map((item) => item.content) as MenuItemStoryblok[]),
+  ];
+}
+
+/* filter offers */
+if (offers) {
+  stories = stories.filter((item) => {
+    return item.price?.some((price) => price.is_offer);
+  });
+}
+function conainerClass() {
+  if (template === "cards") return "breakout flex flex-wrap gap-4 md:gap-8";
+  return "breakout grid grid-flow-dense grid-cols-1 gap-10 sm:grid-cols-2 xl:gap-x-24";
+}
+---
+
+<section
+  class={`py-14 md:py-20 ${surface || ""} template-${template || ""}`}
+  {...storyblokEditable(blok)}
+>
+  <div class="content-grid gap-y-8">
+    <div class="breakout">
+      <h2 class="text-4xl">
+        {title}
+      </h2>
+      <div class="richtext" set:html={renderRichText(content)} />
+    </div>
+
+    <div class={conainerClass()}>
+      {
+        stories.map((item) => (
+          <>
+            {template === "cards" ? (
+              <MenuItemClasicCard
+                content={item}
+                show_offer={offers}
+                accent={accent_surface}
+              />
+            ) : (
+              <MenuItemCard
+                content={item}
+                show_offer={offers}
+                accent={accent_surface}
+              />
+            )}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>

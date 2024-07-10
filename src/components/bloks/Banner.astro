@@ -1,0 +1,116 @@
+---
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import VideoInline from "@components/media/VideoInline.vue";
+import Picture from "@components/media/Picture.astro";
+import Link from "@components/navigation/Link.astro";
+import Intersecting from "@components/helpers/Intersecting.vue";
+interface Props {
+  blok: TextMediaStoryblok;
+}
+
+const { blok } = Astro.props;
+
+const { content, video, image, surface, container, align, links, opacity } =
+  blok;
+
+const renderedRichText = renderRichText(content);
+
+function getSizes() {
+  if (!container) return `100vw `;
+  if (container === "full-width") return `100vw `;
+  if (container === "breakout")
+    return `(min-width: var(--breakout-max-width)) var(--breakout-max-width), (min-width: 768px) 100vw, 100vw `;
+  return `(min-width: var(--content-max-width)) var(--content-max-width), (min-width: 768px) 100vwvw, 100vw `;
+}
+
+function getContainerClass() {
+  if (!container || container === "full-width")
+    return "full-width parallax-wrap ";
+  return `${container} rounded-xl overflow-hidden my-8 parallax-wrap `;
+}
+---
+
+<Intersecting
+  client:visible
+  {...storyblokEditable(blok)}
+  className={` ${surface || ""} `}
+>
+  <div class="content-grid isolate">
+    <div class={getContainerClass()}>
+      <div class={`${surface} ${align || ""} relative w-full overflow-hidden`}>
+        <div
+          class={`parallax absolute inset-0 overflow-hidden ${opacity || ""}`}
+        >
+          {
+            !video?.filename && blok?.image?.filename && (
+              <Picture
+                src={image.filename}
+                alt={image.alt || image.name}
+                className="fade-in"
+                sizes={getSizes()}
+                ar={16 / 9}
+                layout="fill"
+              />
+            )
+          }
+          {
+            video?.filename && (
+              <VideoInline
+                url={video.filename}
+                client:visible
+                className="fade-in"
+              >
+                {blok?.image?.filename && (
+                  <Picture
+                    src={image.filename}
+                    alt={image.alt || image.name}
+                    sizes={getSizes()}
+                    ar={16 / 9}
+                    layout="fill"
+                  />
+                )}
+              </VideoInline>
+            )
+          }
+        </div>
+
+        <div
+          class={!container || container === "full-width"
+            ? "content-grid relative"
+            : "relative px-2 sm:px-4 md:px-8"}
+        >
+          <div
+            class={`scale-in h-fit grid grid-cols-1 gap-4 py-14 md:py-20  sm:${align || ""} `}
+          >
+            <div
+              set:html={renderedRichText}
+              class="richtext max-w-2xl text-ellipsis"
+            />
+
+            {
+              links && links.length > 0 && (
+                <div class="buttons inline-flex w-fit flex-wrap gap-4 pt-4">
+                  {links.map((link) => (
+                    <Link
+                      blok={{
+                        ...link,
+                      }}
+                    />
+                  ))}
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Intersecting>
+
+<style>
+  .text-center {
+    .buttons {
+      @apply justify-center;
+    }
+  }
+</style>

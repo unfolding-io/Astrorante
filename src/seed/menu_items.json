@@ -1,0 +1,1154 @@
+[
+     {
+    "name": "Espresso Martini",
+    "parent_id": 514705299,
+    "group_id": "e47f24dd-e2bb-4621-b3d7-cf5344c95088",
+    "alternates": [],
+    "created_at": "2024-06-26T08:43:19.163Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-28T08:09:56.115Z",
+    "published_at": "2024-06-28T08:09:56.093Z",
+    "id": 515507691,
+    "uuid": "ec2293c7-cd33-41de-ac14-ce4fa9a50cd0",
+    "is_folder": false,
+    "content": {
+      "_uid": "28f32b51-71a5-4be9-8025-e81e08757dd8",
+      "image": {
+        "id": null,
+        "alt": null,
+        "name": "",
+        "focus": null,
+        "title": null,
+        "source": null,
+        "filename": "",
+        "copyright": null,
+        "fieldtype": "asset",
+        "meta_data": {}
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Perfect for coffee lovers seeking a kick.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Vodka, Coffee Liqueur, Freshly Brewed Espresso",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Coffee Beans",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "74c67b0e-3ff9-499a-9e89-f5422c3590ee",
+          "name": "",
+          "price": "7.95",
+          "is_offer": false,
+          "component": "price",
+          "offer_text": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Espresso Martini",
+      "labels": ["organic"],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "allergic_ingredients": ["milk", "sulphurdioxide"]
+    },
+    "publish ": 1,
+    "slug": "espresso-martini",
+    "path": null,
+    "full_slug": "menu-items/cocktails/espresso-martini",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "c7638ab8ff3aae47b41a63fda703eab183599033",
+      "timestamp": "1719666669"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:12:15.527Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/espresso-martini",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 40,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+
+  {
+    "name": "Pina Colada",
+    "parent_id": 514705299,
+    "group_id": "a953816b-61b7-41dc-a77f-93b263198a49",
+    "alternates": [],
+    "created_at": "2024-06-26T08:37:40.095Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-28T13:29:57.245Z",
+    "published_at": "2024-06-28T13:29:57.216Z",
+    "id": 515506256,
+    "uuid": "8a7b4957-299a-4830-b316-2fd847fa44ce",
+    "is_folder": false,
+    "content": {
+      "_uid": "338aae4b-fc3a-419c-8ecd-13adbf702ff4",
+      "image": {
+        "id": null,
+        "alt": null,
+        "name": "",
+        "focus": null,
+        "title": null,
+        "source": null,
+        "filename": "",
+        "copyright": null,
+        "fieldtype": "asset",
+        "meta_data": {}
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A tropical escape in a glass.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " White Rum, Coconut Cream, Pineapple Juice",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Pineapple Slice, Cherry",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "b99807c1-3e5a-4a46-8a3f-8eb5d342d2b7",
+          "name": "",
+          "price": "7.50",
+          "is_offer": false,
+          "component": "price",
+          "offer_text": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Pina Colada",
+      "labels": [],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "description": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph"
+          }
+        ]
+      },
+      "allergic_ingredients": []
+    },
+    "publish ": 1,
+    "slug": "pina-colada",
+    "path": null,
+    "full_slug": "menu-items/cocktails/pina-colada",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "c7638ab8ff3aae47b41a63fda703eab183599033",
+      "timestamp": "1719666669"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-28T13:29:57.216Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/pina-colada",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 50,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+  {
+    "name": "Cosmopolitan",
+    "parent_id": 514705299,
+    "group_id": "a293f608-62be-4924-9cfb-34b1af0cfdb0",
+    "alternates": [],
+    "created_at": "2024-06-26T08:32:05.396Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-28T13:30:04.397Z",
+    "published_at": "2024-06-28T13:30:04.314Z",
+    "id": 515504571,
+    "uuid": "76572201-ef8a-4586-87ea-f8fcbb348788",
+    "is_folder": false,
+    "content": {
+      "_uid": "7b9cc021-028b-43fa-b107-0719e37ac987",
+      "image": {
+        "id": null,
+        "alt": null,
+        "name": "",
+        "focus": null,
+        "title": null,
+        "source": null,
+        "filename": "",
+        "copyright": null,
+        "fieldtype": "asset",
+        "meta_data": {}
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A chic and stylish cocktail with a hint of tartness.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Vodka, Triple Sec, Cranberry Juice, Fresh Lime Juice",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Lime Wheel",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "5ad76107-0175-473d-8466-694d3ec86b8f",
+          "name": "",
+          "price": "8.95",
+          "is_offer": false,
+          "component": "price",
+          "offer_text": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Cosmopolitan",
+      "labels": [],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "description": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph"
+          }
+        ]
+      },
+      "allergic_ingredients": []
+    },
+    "publish ": 1,
+    "slug": "cosmopolitan",
+    "path": null,
+    "full_slug": "menu-items/cocktails/cosmopolitan",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "c7638ab8ff3aae47b41a63fda703eab183599033",
+      "timestamp": "1719666669"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-28T13:30:04.314Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/cosmopolitan",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 60,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+  {
+    "name": "Negroni",
+    "parent_id": 514705299,
+    "group_id": "0715c4e0-a90d-4611-9145-9608eb0aac81",
+    "alternates": [],
+    "created_at": "2024-06-26T08:54:07.095Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-26T16:12:12.617Z",
+    "published_at": "2024-06-26T16:12:12.591Z",
+    "id": 515509038,
+    "uuid": "5e2ec0c1-a7be-4882-83c0-70814427f1b1",
+    "is_folder": false,
+    "content": {
+      "_uid": "690b7c06-0c05-436d-9553-e27cc0fb4e35",
+      "image": {
+        "id": null,
+        "alt": null,
+        "name": "",
+        "focus": null,
+        "title": null,
+        "source": null,
+        "filename": "",
+        "copyright": null,
+        "fieldtype": "asset",
+        "meta_data": {}
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A bold and bitter Italian classic.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Gin, Campari, Sweet Vermouth",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Orange Twist",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "ae6a001f-b134-496e-b8c3-065abb44cf62",
+          "name": "",
+          "price": "6.50",
+          "is_offer": false,
+          "component": "price",
+          "offer_text": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Negroni",
+      "labels": [],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "allergic_ingredients": []
+    },
+    "publish ": 1,
+    "slug": "negroni",
+    "path": null,
+    "full_slug": "menu-items/cocktails/negroni",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "4aa0a22f310438c7c99c5192ea776cf7dfd01c5e",
+      "timestamp": "1719666667"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:12:12.591Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/negroni",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 30,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+  {
+    "name": "Mojito",
+    "parent_id": 514705299,
+    "group_id": "0613d837-a981-48cf-9e24-65568fe0a1bd",
+    "alternates": [],
+    "created_at": "2024-06-25T13:10:36.717Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-28T13:30:01.095Z",
+    "published_at": "2024-06-28T13:30:01.075Z",
+    "id": 515190015,
+    "uuid": "6f017961-ff69-4f8e-98c6-7678edec621c",
+    "is_folder": false,
+    "content": {
+      "_uid": "c90e81b5-a45b-4777-85fb-2cdb7a0a1d7e",
+      "meta": [],
+      "image": {
+        "id": 16356549,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/2048x2048/92a8587ea5/margarita.jpeg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {},
+        "is_private": false,
+        "is_external_url": false
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Refreshing and minty, a perfect summer drink.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " White Rum, Fresh Mint Leaves, Lime Juice, Sugar, Soda Water",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish:",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      },
+                      {
+                        "text": " Mint Sprig, Lime Wedge",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "3d909497-b67a-41d3-a95e-4059154c3256",
+          "name": "Glass",
+          "price": "6.50",
+          "component": "price"
+        },
+        {
+          "_uid": "f3fc7cab-9217-4809-a85e-922dba4a6554",
+          "name": "Pitcher",
+          "price": "24.50",
+          "component": "price"
+        },
+        {
+          "_uid": "823099fc-fc8c-4069-8d40-56f62bfe9dec",
+          "name": "Mojiio Monday",
+          "price": "4.00",
+          "is_offer": true,
+          "component": "price",
+          "offer_text": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Every Monday from 5am to 7am",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Mojito",
+      "labels": ["organic"],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "description": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph"
+          }
+        ]
+      },
+      "allergic_ingredients": ["soy", "molluscs", "peanut"]
+    },
+    "publish ": 1,
+    "slug": "mojito",
+    "path": null,
+    "full_slug": "menu-items/cocktails/mojito",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "77e9e72fd9f1cf3ef289f3de42d6107719f60b25",
+      "timestamp": "1719666666"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:12:05.888Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/mojito",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 10,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  },
+  {
+    "name": "Classic Margarita",
+    "parent_id": 514705299,
+    "group_id": "c8258329-1f5c-4981-a491-ed5bdce82aa4",
+    "alternates": [],
+    "created_at": "2024-06-25T12:55:13.943Z",
+    "deleted_at": null,
+    "sort_by_date": null,
+    "tag_list": [],
+    "updated_at": "2024-06-26T16:12:09.614Z",
+    "published_at": "2024-06-26T16:12:09.592Z",
+    "id": 515179520,
+    "uuid": "7ab10332-65c6-4e21-b255-182e4f8f40a0",
+    "is_folder": false,
+    "content": {
+      "_uid": "aa6eb753-d9f4-4f7a-bf55-1080def1f4ee",
+      "meta": [],
+      "image": {
+        "id": 16356549,
+        "alt": "",
+        "name": "",
+        "focus": "",
+        "title": "",
+        "source": "",
+        "filename": "https://a.storyblok.com/f/294188/2048x2048/92a8587ea5/margarita.jpeg",
+        "copyright": "",
+        "fieldtype": "asset",
+        "meta_data": {},
+        "is_private": false,
+        "is_external_url": false
+      },
+      "intro": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A timeless favorite, perfect for any occasion.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Ingredients: Tequila, Triple Sec, Lime Juice, Simple Syrup",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Garnish: Salt Rim, Lime Wheel",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "price": [
+        {
+          "_uid": "bd0e56d6-4577-43af-aa1d-8882c8af32d6",
+          "name": "Glass",
+          "price": "6.50",
+          "component": "price"
+        },
+        {
+          "_uid": "b06717b8-5910-4b24-9b5d-db7b36113dc8",
+          "name": "Pitcher",
+          "price": "22.50",
+          "component": "price"
+        }
+      ],
+      "title": "Classic Margarita",
+      "labels": [],
+      "category": ["3da7bdf2-69de-4528-b2da-eb21d2cdd963"],
+      "component": "menu_item",
+      "description": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph"
+          }
+        ]
+      },
+      "allergic_ingredients": []
+    },
+    "publish ": 1,
+    "slug": "classic-margarita",
+    "path": null,
+    "full_slug": "menu-items/cocktails/classic-margarita",
+    "default_root": null,
+    "disble_fe_editor": false,
+    "parent": {
+      "id": 514705299,
+      "uuid": "490ce493-d8a1-488a-beab-a20a6f066f82",
+      "name": "Cocktails",
+      "slug": "cocktails",
+      "disble_fe_editor": true
+    },
+    "is_startpage": false,
+    "unpublished_changes": false,
+    "meta_data": null,
+    "imported_at": null,
+    "preview_token": {
+      "token": "77e9e72fd9f1cf3ef289f3de42d6107719f60b25",
+      "timestamp": "1719666666"
+    },
+    "pinned": false,
+    "breadcrumbs": [
+      {
+        "id": 514704528,
+        "name": "Menu Items",
+        "parent_id": 0,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "menu-items",
+        "translated_slugs": []
+      },
+      {
+        "id": 514705299,
+        "name": "Cocktails",
+        "parent_id": 514704528,
+        "disble_fe_editor": true,
+        "path": null,
+        "slug": "cocktails",
+        "translated_slugs": []
+      }
+    ],
+    "publish_at": null,
+    "expire_at": null,
+    "first_published_at": "2024-06-26T16:12:09.592Z",
+    "last_author": {
+      "id": 68956,
+      "userid": "hello@unfolding.io",
+      "friendly_name": "hello@unfolding.io"
+    },
+    "last_author_id": 68956,
+    "user_ids": [],
+    "space_role_ids": [],
+    "translated_slugs": [],
+    "localized_paths": [
+      {
+        "path": "menu-items/cocktails/classic-margarita",
+        "name": null,
+        "lang": "nl",
+        "published": null
+      }
+    ],
+    "position": 20,
+    "translated_stories": [],
+    "can_not_view": false,
+    "is_scheduled": null,
+    "scheduled_dates": null,
+    "ideas": [],
+    "favourite_for_user_ids": []
+  }
+]

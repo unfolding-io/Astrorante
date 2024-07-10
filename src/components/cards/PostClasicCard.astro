@@ -1,0 +1,39 @@
+---
+import Picture from "@components/media/Picture.astro";
+import Intersecting from "@components/helpers/Intersecting.vue";
+import { SITE_LANG } from "astro:env/server";
+import { getLangFromUrl } from "@util/translate";
+const lang = getLangFromUrl(Astro.url);
+
+const { full_slug, thumbnail, title, intro, accent } = Astro.props;
+
+const url = lang !== SITE_LANG ? `/${lang}/${full_slug}` : `/${full_slug}`;
+---
+
+<a
+  href={`${url}`}
+  class={`${accent} shadow-lg group transition-all duration-300 @container rounded-lg overflow-hidden min-w-[16rem] flex-1`}
+>
+  <Intersecting
+    client:visible
+    className="grid h-fit auto-rows-max grid-cols-1 @md:grid-cols-2"
+  >
+    <div
+      class={`relative h-full overflow-hidden @md:aspect-square bg-dark/50 bg-blend-overlay`}
+    >
+      <Picture
+        src={thumbnail.filename}
+        alt="title"
+        sizes="(min-width: 1240px) 382px ,(min-width: 1098px) 32vw, (min-width: 640px) calc(50vw - 2.5rem), (min-width: 576px) 45vw, calc(100vw - 2rem)"
+        ar={16 / 9}
+        layout="fill"
+        loading="lazy"
+        className="transition-all duration-500 fade-in group-hover:grayscale-[100%]"
+      />
+    </div>
+    <div class={`scale-in z-20 p-4`}>
+      <h2 class="text-2xl">{title}</h2>
+      <div class="line-clamp-3">{intro}</div>
+    </div>
+  </Intersecting>
+</a>
