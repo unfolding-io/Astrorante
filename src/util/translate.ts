@@ -55,6 +55,23 @@ export function getLangFromUrl(url: URL) {
   return SITE_LANG;
 }
 
+function convertToLocaleTime(timeString: string, lang: string): string {
+  // Split the time string into hours and minutes
+  const [hours, minutes] = timeString.split(':').map(Number);
+
+  // Create a new Date object for today
+  const today = new Date();
+
+  // Set hours and minutes to the Date object
+  today.setHours(hours, minutes);
+
+  // Convert to local time string based on the provided lang
+  // The format (12-hour or 24-hour) is determined by the locale
+  const localTimeString = today.toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit' });
+
+  return localTimeString;
+}
+
 export function mergeOpeningHours(days: OpeningHourStoryblok[], lang: string) {
   const t = useTranslations(lang);
   const arr = [0, 1, 2, 3, 4, 5, 6];
@@ -64,7 +81,7 @@ export function mergeOpeningHours(days: OpeningHourStoryblok[], lang: string) {
     days
       .filter((day) => day.day == d + "")
       .map((hours) => {
-        openString += `<span>${hours.time.time.start} - ${hours.time.time.end} </span>`;
+        openString += `<span>${convertToLocaleTime(hours.time.time.start, lang)} - ${convertToLocaleTime(hours.time.time.end,lang)} </span>`;
       });
 
     /* get the localized day names */
