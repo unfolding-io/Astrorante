@@ -54,7 +54,7 @@ const text = renderRichText(content);
             )}
           </VideoInline>
         )}
-        {!video?.filename && (
+        {!video?.filename && thumbnail?.filename && (
           <Picture
             src={thumbnail.filename}
             alt={thumbnail.alt || title}
