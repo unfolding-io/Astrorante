@@ -53,7 +53,8 @@ export default defineConfig({
     ....
 
 ```
-
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funfolding-io%2FAstrorante&env=STORYBLOK_PREVIEW_TOKEN,STORYBLOK_PERSONAL_TOKEN,STORYBLOK_SPACE_ID,LOCALE,CURRENCY,SITE_LANG&envDescription%3DSITE_LANG%20for%20examle%20en%20or%20de)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/unfolding-io/Astrorante)
 
 ## 🛸 Commands
 
