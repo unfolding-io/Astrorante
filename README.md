@@ -53,7 +53,7 @@ export default defineConfig({
     ....
 
 ```
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funfolding-io%2FAstrorante&env=STORYBLOK_PREVIEW_TOKEN,STORYBLOK_PERSONAL_TOKEN,STORYBLOK_SPACE_ID,LOCALE,CURRENCY,SITE_LANG&envDescription=envDescription%3DAll%20ENV%20variables%20are%20mandatory%3A%0A%20%20STORYBLOK_PREVIEW_TOKEN%3D%22Add%20your%20Storyblok%20API%20token%20for%20the%20new%20Space%20here%22%0A%20%20STORYBLOK_PERSONAL_TOKEN%3D%22Add%20your%20Storyblok%20Personal%20token%20here%22%0A%20%20STORYBLOK_SPACE_ID%3D%22Add%20your%20Storyblok%20Space%20ID%20for%20the%20new%20Space%20here%22%0A%20%20LOCALE%3D%22The%20locale%20of%20the%20content%2C%20eg.%20%27en-US%27%22%0A%20%20CURRENCY%3D%22The%20currency%20on%20your%20site%2C%20eg.%20%27USD%27%22%0A%20%20SITE_LANG%3D%22The%20language%20of%20your%20site%2C%20eg.%20%27en%27%22)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funfolding-io%2FAstrorante&env=STORYBLOK_PREVIEW_TOKEN,STORYBLOK_PERSONAL_TOKEN,STORYBLOK_SPACE_ID,LOCALE,CURRENCY,SITE_LANG&envDescription=All%20ENV%20variables%20are%20mandatory)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/unfolding-io/Astrorante)
 
 ## 🛸 Commands
