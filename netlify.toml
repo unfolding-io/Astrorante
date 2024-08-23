@@ -2,12 +2,12 @@
   incoming-hooks = ["Storyblok"]
 
 [template.environment]
-  STORYBLOK_PREVIEW_TOKEN="Add your Storyblok API token for the new Space here"
-  STORYBLOK_PERSONAL_TOKEN="Add your Storyblok Personal token here"
-  STORYBLOK_SPACE_ID="Add your Storyblok Space ID for the new Space here"
-  LOCALE="The locale of the content, eg. 'en-US'"
-  CURRENCY="The currency on your site, eg. 'USD'"
-  SITE_LANG="The language of your site, eg. 'en'"
+  STORYBLOK_PREVIEW_TOKEN = "Add your Storyblok API token for the new Space here"
+  STORYBLOK_PERSONAL_TOKEN = "Add your Storyblok Personal token here"
+  STORYBLOK_SPACE_ID = "Add your Storyblok Space ID for the new Space here"
+  LOCALE = "The locale of the content, eg. 'en-US'"
+  CURRENCY = "The currency on your site, eg. 'USD'"
+  SITE_LANG = "The language of your site, eg. 'en'"
 
 [build]
   command = "npm run build"
