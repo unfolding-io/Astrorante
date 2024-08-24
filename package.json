@@ -1,7 +1,7 @@
 {
   "name": "astrorante",
   "type": "module",
-  "version": "0.0.3tatus",
+  "version": "0.0.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
