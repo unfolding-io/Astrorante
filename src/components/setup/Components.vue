@@ -62,8 +62,7 @@ const components = ref([]);
 const loading = ref(false);
 import seed from "@/seed/components.json";
 
-const success = computed(() => {
-  console.log(components.value.length,seed.length )
+const success = computed(() => { 
   return components.value.length === seed.length;
 });
 

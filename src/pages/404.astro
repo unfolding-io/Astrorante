@@ -1,8 +1,8 @@
 ---
-import { getSettings } from "@util/storyblokApi";
 import Layout from "@layouts/Layout.astro";
+import { getSettings } from "@util/storyblokApi";
 
-const settings = await getSettings("default");
+const settings = await getSettings();
 
 const meta = {
   title: "404",
@@ -10,6 +10,7 @@ const meta = {
   og_image: "",
   image: "",
 };
+console.log("create 404 page");
 ---
 
 <Layout meta={meta} {settings}>

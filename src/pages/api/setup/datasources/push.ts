@@ -7,7 +7,7 @@ export const prerender = false;
 export const POST: APIRoute = async (/* { request, url } */) => {
   try {
     const currentDataSources: DataSource[] | [] = await pullDataSources();
-
+    
     const res = await pushDataSources(
       datasources as DataSource[],
       currentDataSources,
@@ -18,7 +18,7 @@ export const POST: APIRoute = async (/* { request, url } */) => {
       },
     });
   } catch (error) {
-    console.error("Error in searchListings:", error);
+    console.error("Storyblok error?:", error);
   }
 
   return new Response(null, { status: 400 });

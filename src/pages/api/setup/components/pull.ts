@@ -13,7 +13,7 @@ export const GET: APIRoute = async (/* { request, url } */) => {
       },
     });
   } catch (error) {
-    console.error("Error in searchListings:", error);
+    console.error("Storyblok error:", error);
   }
 
   return new Response(null, { status: 400 });

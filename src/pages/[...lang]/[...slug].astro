@@ -20,6 +20,7 @@ export async function getStaticPaths() {
     const pages = locales.flatMap(async (lang, index) => {
       const dataLang = index === 0 ? "default" : lang;
       const settings = await getSettings(lang);
+     
 
       const pages = await getPages(
         dataLang,
