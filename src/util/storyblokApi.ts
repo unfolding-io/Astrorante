@@ -17,16 +17,21 @@ function extractDataSlug(slug: string, lang: string) {
   return slug.replace(`${lang}/`, "");
 }
 
-export const getSettings = async (lang: string | undefined) => {
-  const { data: settingsData } = (await api.get(
-    "cdn/stories/site-settings/settings",
-    {
-      version: import.meta.env.DEV ? "draft" : "published",
-      language: !lang ? "default" : lang,
-    },
-  )) as ISbResult;
+export const getSettings = async (lang?: string | undefined) => {
+  try {
+    const { data: settingsData } = (await api.get(
+      "cdn/stories/site-settings/settings",
+      {
+        version: import.meta.env.DEV ? "draft" : "published",
+        language: !lang ? "default" : lang,
+      },
+    )) as ISbResult;
 
-  return settingsData?.story?.content as SettingsStoryblok;
+    return settingsData?.story?.content as SettingsStoryblok;
+  } catch (error) {
+    console.log("Fetch Settings error:", error);
+    throw new Error("Can't fetch settings, is it published?");
+  }
 };
 
 export const getPage = async (
@@ -282,43 +287,45 @@ export const pushDataSources = async (
         },
       };
 
-     try {
-      const datasources = (await Storyblok.post(
-        `/spaces/${STORYBLOK_SPACE_ID}/datasources/`,
-        params,
-      )) as any;
+      try {
+        const datasources = (await Storyblok.post(
+          `/spaces/${STORYBLOK_SPACE_ID}/datasources/`,
+          params,
+        )) as any;
 
-      console.log(`📂 Create datasource Folder: ${item.name}`);
+        console.log(`📂 Create datasource Folder: ${item.name}`);
 
-      if (datasources?.data?.datasource && datasources?.data?.datasource?.id) {
-        console.log("📃 Entries to add:", item.datasource_entries);
-        await Promise.all(
-          item.datasource_entries.map(async (entry: DataSourceEntry) => {
-            const params: any = {
-              datasource_entry: {
-                datasource_id: datasources.data.datasource.id,
-                name: entry.name,
-                value: entry.value,
-              },
-            };
+        if (
+          datasources?.data?.datasource &&
+          datasources?.data?.datasource?.id
+        ) {
+          console.log("📃 Entries to add:", item.datasource_entries);
+          await Promise.all(
+            item.datasource_entries.map(async (entry: DataSourceEntry) => {
+              const params: any = {
+                datasource_entry: {
+                  datasource_id: datasources.data.datasource.id,
+                  name: entry.name,
+                  value: entry.value,
+                },
+              };
 
-            if (entry.name && entry.value) {
-              console.log(`💾 Adding Entry: ${entry.name}`);
+              if (entry.name && entry.value) {
+                console.log(`💾 Adding Entry: ${entry.name}`);
 
-              await Storyblok.post(
-                `/spaces/${STORYBLOK_SPACE_ID}/datasource_entries/`,
-                params,
-              );
-            }
-          }),
-        );
-      } else {
-        console.log("No datasource Items created");
+                await Storyblok.post(
+                  `/spaces/${STORYBLOK_SPACE_ID}/datasource_entries/`,
+                  params,
+                );
+              }
+            }),
+          );
+        } else {
+          console.log("No datasource Items created");
+        }
+      } catch (error) {
+        console.log("DataSource Error:", error);
       }
-     }
-     catch (error) {
-      console.log("DataSource Error:", error);
-     }
     }
   }
 
@@ -358,27 +365,25 @@ export const pushComponents = async (data: any, current: any) => {
 
     if (!existing) {
       // add component
-     try {
-      await Storyblok.post(`/spaces/${STORYBLOK_SPACE_ID}/components/`, {
-        component: item,
-      });
-     }
-     catch (error) {
-      console.log("Cant update Component:", error);
-     }
+      try {
+        await Storyblok.post(`/spaces/${STORYBLOK_SPACE_ID}/components/`, {
+          component: item,
+        });
+      } catch (error) {
+        console.log("Cant update Component:", error);
+      }
     } else {
       //update component
-     try{
-      await Storyblok.put(
-        `/spaces/${STORYBLOK_SPACE_ID}/components/${existing.id}`,
-        {
-          component: item,
-        },
-      );
-     }
-     catch (error) {
-      console.log("Cant create Component:", error);
-     }
+      try {
+        await Storyblok.put(
+          `/spaces/${STORYBLOK_SPACE_ID}/components/${existing.id}`,
+          {
+            component: item,
+          },
+        );
+      } catch (error) {
+        console.log("Cant create Component:", error);
+      }
     }
   }
 
@@ -461,19 +466,15 @@ export const pushStories = async (data: any, current: any) => {
   let folders: any, subfolders: any;
   /* Create folders */
   if (data.folders) {
-
     try {
       folders = await Promise.all(
         data.folders.map(async (item: any) => {
           return await createStory(item, current);
         }),
       );
-
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create folders:", error);
     }
-    
   }
 
   if (folders && data.subfolders) {
@@ -488,8 +489,7 @@ export const pushStories = async (data: any, current: any) => {
         }),
       );
       folders = [...folders, ...subfolders];
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create subfolders:", error);
     }
   }
@@ -501,8 +501,7 @@ export const pushStories = async (data: any, current: any) => {
         (f: ISbStoryData) => f.slug === data.settings.parent.slug,
       );
       await createStory(data.settings, current, parent);
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create settings:", error);
     }
   }
@@ -513,12 +512,13 @@ export const pushStories = async (data: any, current: any) => {
     try {
       await Promise.all(
         data.pages.map(async (item: any) => {
-          const parent = folders.find((f: any) => f.slug === item?.parent?.slug);
+          const parent = folders.find(
+            (f: any) => f.slug === item?.parent?.slug,
+          );
           await createStory(item, current, parent);
         }),
       );
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create pages:", error);
     }
   }
@@ -529,29 +529,31 @@ export const pushStories = async (data: any, current: any) => {
     try {
       await Promise.all(
         data.posts.map(async (item: any) => {
-          const parent = folders.find((f: any) => f.slug === item?.parent?.slug);
+          const parent = folders.find(
+            (f: any) => f.slug === item?.parent?.slug,
+          );
           await createStory(item, current, parent);
         }),
       );
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create posts:", error);
     }
   }
 
   /* create menu categories */
   if (folders && data.menu_categories) {
-   try {
-    await Promise.all(
-      data.menu_categories.map(async (item: any) => {
-        const parent = folders.find((f: any) => f.slug === item?.parent?.slug);
-        await createStory(item, current, parent);
-      }),
-    );
-   }
-   catch (error) {
-    console.log("Can't create menu categories:", error);
-   }
+    try {
+      await Promise.all(
+        data.menu_categories.map(async (item: any) => {
+          const parent = folders.find(
+            (f: any) => f.slug === item?.parent?.slug,
+          );
+          await createStory(item, current, parent);
+        }),
+      );
+    } catch (error) {
+      console.log("Can't create menu categories:", error);
+    }
   }
 
   /* create menu items */
@@ -559,12 +561,13 @@ export const pushStories = async (data: any, current: any) => {
     try {
       await Promise.all(
         data.menu_items.map(async (item: any) => {
-          const parent = folders.find((f: any) => f.slug === item?.parent?.slug);
+          const parent = folders.find(
+            (f: any) => f.slug === item?.parent?.slug,
+          );
           await createStory(item, current, parent);
         }),
       );
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Can't create menu items:", error);
     }
   }

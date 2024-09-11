@@ -23,6 +23,9 @@ const dataUrl = localeUrls.filter((url) => url.url !== SITE_LANG)[0].url;
 
 const t = useTranslations(pageLang);
 const settings = await getSettings(lang);
+if (!settings) {
+  return Astro.redirect("/setup");
+}
 
 let blok: PageStoryblok | null = null;
 
