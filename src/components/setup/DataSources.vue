@@ -58,7 +58,6 @@ const loading = ref(false);
 import seed from "@/seed/datasources.json";
 
 const success = computed(() => {
-
   return datasources.value.length === seed.length;
 });
 
@@ -99,6 +98,7 @@ const pushDataSources = async () => {
     await response.json();
     setTimeout(() => {
       loading.value = false;
+      console.log(`🔄 Fetching new datasources`);
       fetchDataSources();
     }, 1000);
   } catch (error) {
