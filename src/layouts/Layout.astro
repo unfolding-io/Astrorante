@@ -10,7 +10,7 @@ import { Icon } from "astro-icon/components";
 import { SEO } from "astro-seo";
 import { SITE_LANG } from "astro:env/server";
 import { useTranslations, getLangFromUrl } from "@util/translate";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "@styles/globals.css";
 
 interface Meta {
@@ -194,7 +194,7 @@ let socialImage = meta.image + "/m/1200x630/smart/filters:format(png)";
       )
     }
 
-    {!bridge && <ViewTransitions />}
+    {!bridge && <ClientRouter />}
   </head>
   <body class={`${surface_page || ""}`}>
     {bridge && <SbBridge client:load />}

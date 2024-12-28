@@ -2,8 +2,7 @@
 import { storyblokEditable, renderRichText } from "@storyblok/astro";
 import VideoInline from "@components/media/VideoInline.vue";
 import Picture from "@components/media/Picture.astro";
-import Link from "@components/navigation/Link.astro";
-import Intersecting from "@components/helpers/Intersecting.vue";
+import Link from "@components/navigation/Link.astro"; 
 interface Props {
   blok: TextMediaStoryblok;
 }
@@ -36,10 +35,9 @@ function getSizes() {
 }
 ---
 
-<Intersecting
-  client:visible
+    <div
   {...storyblokEditable(blok)}
-  className={` ${surface || ""} `}
+  class={` ${surface || ""} intersecting`}
 >
   <div
     class={`${container && "content-grid py-8 md:py-0"} `}
@@ -126,7 +124,7 @@ function getSizes() {
       </div>
     </div>
   </div>
-</Intersecting>
+</div>
 
 <style>
   .text-media {

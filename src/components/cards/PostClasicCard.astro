@@ -1,6 +1,5 @@
 ---
-import Picture from "@components/media/Picture.astro";
-import Intersecting from "@components/helpers/Intersecting.vue";
+import Picture from "@components/media/Picture.astro"; 
 import { SITE_LANG } from "astro:env/server";
 import { getLangFromUrl } from "@util/translate";
 const lang = getLangFromUrl(Astro.url);
@@ -14,9 +13,8 @@ const url = lang !== SITE_LANG ? `/${lang}/${full_slug}` : `/${full_slug}`;
   href={`${url}`}
   class={`${accent} shadow-lg group transition-all duration-300 @container rounded-lg overflow-hidden min-w-[16rem] flex-1`}
 >
-  <Intersecting
-    client:visible
-    className="grid h-fit auto-rows-max grid-cols-1 @md:grid-cols-2"
+  <div 
+    class="intersecting grid h-fit auto-rows-max grid-cols-1 @md:grid-cols-2"
   >
     <div
       class={`relative h-full overflow-hidden @md:aspect-square bg-dark/50 bg-blend-overlay`}
@@ -35,5 +33,5 @@ const url = lang !== SITE_LANG ? `/${lang}/${full_slug}` : `/${full_slug}`;
       <h2 class="text-2xl">{title}</h2>
       <div class="line-clamp-3">{intro}</div>
     </div>
-  </Intersecting>
+  </div>
 </a>

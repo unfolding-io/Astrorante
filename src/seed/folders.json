@@ -8,27 +8,15 @@
       "lock_subfolders_content_types": true
     },
     "slug": "menu-items",
-    "full_slug": "menu-items",
     "default_root": "menu_item",
-    "disble_fe_editor": true,
-    "parent": null,
-    "is_startpage": false,
-    "published": true,
-    "meta_data": null,
-    "imported_at": null,
     "position": 40
   },
   {
-    "name": "News",
+    "name": "News", 
     "parent_id": 0,
     "is_folder": true,
-    "content": null,
-    "published": true,
     "slug": "news",
-    "full_slug": "news",
     "default_root": "post",
-    "disble_fe_editor": false,
-    "parent": null,
     "position": 30
   },
   {
@@ -39,27 +27,16 @@
       "content_types": ["menu_category"],
       "lock_subfolders_content_types": true
     },
-    "published": true,
     "slug": "menu-categories",
-    "full_slug": "menu-categories",
     "default_root": "menu_category",
-    "disble_fe_editor": true,
-    "parent": null,
-    "is_startpage": false,
     "position": 50
   },
   {
     "name": "Site Settings",
     "parent_id": 0,
     "is_folder": true,
-    "content": null,
-    "published": true,
     "slug": "site-settings",
-    "full_slug": "site-settings",
     "default_root": "page",
-    "disble_fe_editor": true,
-    "parent": null,
-    "is_startpage": false,
     "position": 60
   }
 ]

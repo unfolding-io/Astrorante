@@ -1,7 +1,6 @@
 ---
 import { storyblokEditable, renderRichText } from "@storyblok/astro";
-import Link from "@components/navigation/Link.astro";
-import Intersecting from "@components/helpers/Intersecting.vue";
+import Link from "@components/navigation/Link.astro"; 
 interface Props {
   blok: TextMediaStoryblok;
 }
@@ -13,10 +12,9 @@ const { content, surface, align, links } = blok;
 const renderedRichText = renderRichText(content);
 ---
 
-<Intersecting
-  client:visible
+  <div
   {...storyblokEditable(blok)}
-  className={`${surface || ""}`}
+    class={`${surface || ""} intersecting`}
 >
   <div class="content-grid">
     <div
@@ -39,4 +37,4 @@ const renderedRichText = renderRichText(content);
       }
     </div>
   </div>
-</Intersecting>
+</div>

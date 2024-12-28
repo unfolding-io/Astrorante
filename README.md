@@ -4,12 +4,15 @@
 
 ## 📝 1. Setting up the .env file
 
-rename the `env.txt` to `.env` and fill in your details
+rename the `env.txt` to `.env` and fill in your details.
+
+_Make sure you add your Storyblok space region `eu, us, ap, ca, cn`_
 
 ```sh
 STORYBLOK_PREVIEW_TOKEN=XXX
 STORYBLOK_PERSONAL_TOKEN=XXX
 STORYBLOK_SPACE_ID=000000
+STORYBLOK_REGION=eu
 LOCALE=en-US
 CURRENCY=USD
 SITE_LANG=en
@@ -43,7 +46,6 @@ And sync your Datasources, Components, and stories. it is best to first delete b
 
 export default defineConfig({
     site: 'https://your-website.com',
-    output: "hybrid",
     adapter: vercel(), // vercel() or netlify()
 
     ....

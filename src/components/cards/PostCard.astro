@@ -1,6 +1,5 @@
 ---
-import Picture from "@components/media/Picture.astro";
-import Intersecting from "@components/helpers/Intersecting.vue";
+import Picture from "@components/media/Picture.astro"; 
 const { full_slug, thumbnail, title, intro, reverse, accent } = Astro.props;
 ---
 
@@ -8,9 +7,8 @@ const { full_slug, thumbnail, title, intro, reverse, accent } = Astro.props;
   href={`/${full_slug}`}
   class={`group transition-all duration-300 @container ${reverse ? "reverse " : "md:translate-y-20"}`}
 >
-  <Intersecting
-    client:visible
-    className="grid h-fit auto-rows-max grid-cols-1 @md:auto-rows-auto @md:grid-cols-6"
+  <div
+    class="intersecting grid h-fit auto-rows-max grid-cols-1 @md:auto-rows-auto @md:grid-cols-6"
   >
     <div
       class={`card-media relativeh-full overflow-hidden rounded-lg @md:col-span-4  @md:row-start-1 ${reverse ? "@md:col-start-3" : "@md:col-start-1"}`}
@@ -30,5 +28,5 @@ const { full_slug, thumbnail, title, intro, reverse, accent } = Astro.props;
       <h2 class="text-2xl">{title}</h2>
       <div class="line-clamp-3">{intro}</div>
     </div>
-  </Intersecting>
+  </div>
 </a>

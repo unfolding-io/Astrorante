@@ -1,7 +1,7 @@
 {
   "name": "astrorante",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -15,13 +15,13 @@
     "upgrade": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/netlify": "^5.5.2",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/ts-plugin": "^1.10.2",
-    "@astrojs/vercel": "^7.8.1",
-    "@astrojs/vue": "^4.5.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/netlify": "^6.0.1",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/ts-plugin": "^1.10.4",
+    "@astrojs/vercel": "^8.0.1",
+    "@astrojs/vue": "^5.0.3",
     "@fontsource-variable/readex-pro": "^5.0.15",
     "@nanostores/vue": "^0.10.0",
     "@storyblok/astro": "^5.0.2",
@@ -29,7 +29,7 @@
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@vueuse/components": "^11.0.3",
     "@vueuse/core": "^11.0.3",
-    "astro": "^4.15.4",
+    "astro": "^5.1.1",
     "astro-icon": "^1.1.1",
     "astro-seo": "^0.8.4",
     "class-variance-authority": "^0.7.0",

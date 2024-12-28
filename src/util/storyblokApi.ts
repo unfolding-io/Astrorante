@@ -2,13 +2,14 @@ import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokClient from "storyblok-js-client";
 import type { ISbStories, ISbStoryData, ISbResult } from "@storyblok/astro";
 
-import { STORYBLOK_SPACE_ID, getSecret } from "astro:env/server";
+import { STORYBLOK_SPACE_ID, STORYBLOK_REGION, getSecret } from "astro:env/server";
 
 const token = getSecret("STORYBLOK_PERSONAL_TOKEN");
 export const api = useStoryblokApi();
 
 const Storyblok = new StoryblokClient({
   oauthToken: token,
+  region: STORYBLOK_REGION,
 });
 
 function extractDataSlug(slug: string, lang: string) {
